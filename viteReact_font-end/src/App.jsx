@@ -1,13 +1,23 @@
-import './App.css'
+import Nav from './components/Nav'
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import Home from './pages/Home';
+import Register from './pages/Register';
+import './App.css';
+import 'flowbite';
+import Footer from './components/Footer';
 
 function App() {
-  
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-    </>
+    <Router>
+      <div className=''>
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </div>
+      <Footer/>
+    </Router>
   )
 }
 
