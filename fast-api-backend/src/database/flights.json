@@ -1,0 +1,14 @@
+[
+    {
+        "flight_no": "SV2553CX",
+        "duration_time": 120,
+        "departure_airport": 1,
+        "destination_airport": 2
+    },
+    {
+        "flight_no": "CX2556SV",
+        "duration_time": 120,
+        "departure_airport": 2,
+        "destination_airport": 1
+    }
+]

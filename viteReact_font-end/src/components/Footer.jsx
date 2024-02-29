@@ -26,8 +26,8 @@ function Footer() {
                         <ul className='mt-6 text-sm font-light text-gray-300 flex flex-col gap-4'>
                             <li>Prakan Suma</li>
                             <li>Pip</li>
-                            <li>Pat</li>
-                            <li>Link</li>
+                            <li>Anawin Churboka</li>
+                            <li>Pittawat Kitmongkolchai</li>
                         </ul>
                     </div>
 
@@ -38,10 +38,6 @@ function Footer() {
                             <li>soartheskye@soartheskye.com</li>
                         </ul>
                     </div>
-
-
-
-
 
                 </div>
                 <div className="">

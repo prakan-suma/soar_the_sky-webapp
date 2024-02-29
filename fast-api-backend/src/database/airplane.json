@@ -1,0 +1,16 @@
+[
+    {
+        "airplane_id": 1,
+        "air_type": "Boeing",
+        "model": "747-8",
+        "capacity": 467,
+        "seat": 300
+    },
+    {
+        "airplane_id": 2,
+        "air_type": "Airbus",
+        "model": "AXT-35774",
+        "capacity": 525,
+        "seat": 600
+    }
+]
