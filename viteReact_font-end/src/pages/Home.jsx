@@ -7,7 +7,7 @@ const Home = () => {
         <div className="container relative mx-auto mt-28 ">
 
             <FlightSearch />
-
+            
             <section className=''>
                 <PopularCountry />
             </section>

@@ -19,6 +19,7 @@ class Flight:
     def get_destination_airport(self):
         return self.__destination_airport
     
+    
     def to_dict(self):
         flight_dict = {
             "flight_no": self.__flight_no,
