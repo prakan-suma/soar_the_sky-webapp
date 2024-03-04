@@ -2,7 +2,7 @@ class AirPort:
     def __init__(self, airport_id, airport_code, gate, name, location):
         self.__airport_id = airport_id
         self.__airport_code = airport_code
-        self.__gate = []
+        self.__gate =  gate
         self.__name = name
         self.__location = location
 
@@ -25,7 +25,7 @@ class AirPort:
         thailand_airports = [
             AirPort(1, "BKK", ["Gate A", "Gate B", "Gate C"],
                     "Suvarnabhumi Airport", "Bangkok"),
-            AirPort(2, "DMK", ["Gate D", "Gate E"],
+            AirPort(2, "DMK", ["Gate A", "Gate B", "Gate C"],
                     "Don Mueang International Airport", "Bangkok"),
             AirPort(3, "CNX", ["Gate F", "Gate G"],
                     "Chiang Mai International Airport", "Chiang Mai"),

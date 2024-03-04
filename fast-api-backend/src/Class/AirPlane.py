@@ -6,6 +6,9 @@ class AirPlane:
         self.__model = model
         self.__capacity =  capacity
         self.__seat = seat
+        
+    def get_airplane_id(self):
+        return self.__airplane_id
     
     def create_instance():
         airplane = []

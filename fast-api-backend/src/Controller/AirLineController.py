@@ -18,8 +18,13 @@ class AirLineController:
         return self.__airport_list
     
     def search_from_id(self,airport_id):
-        airport = [a for a in self.__airport_list if airport_id == a.get_airport_id()]
-        return airport
+        for a in self.__airport_list:
+            if airport_id == a.get_airport_id():
+                airport_obj = a
+            else:
+                None
+                
+        return airport_obj
     
     def set_airport_list(self,airport_list):
         self.__airport_list = airport_list
