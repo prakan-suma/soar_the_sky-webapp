@@ -1,5 +1,6 @@
 import json 
-from src.Class import AirPlane,AirPort,Flight,FlightSeat,FlightInstance
+from src.Class import AirPlane,AirPort,Flight,FlightSeat,FlightInstance   
+
 import datetime
 
 class AirLineController:
@@ -15,9 +16,6 @@ class AirLineController:
             
         with open('./src/database/flights_instance.json') as f:
             flight_instance_json = json.load(f)
-            
-        # with open('./src/database/flight_seat.json') as f:
-        #     flight_seat_json = json.load(f)
         
         with open('./src/database/airport.json') as f:
             airport_json = json.load(f)
@@ -49,7 +47,10 @@ class AirLineController:
                 
                 flight_instance_object = FlightInstance.FlightInstance(airplane=airplane_obj,flight_seat=None,departure_date=flight_instance_list['departure_date'],destination_date=flight_instance_list['destination_date'],departure_time=flight_instance_list['departure_time'],arrival_time=flight_instance_list['arrival_time'],price=flight_instance_list['price'],flight_no=flight_no,duration_time=duration_time,departure_airport=departure_airport_obj,destination_airport=destination_airport_obj)
                 
+                flight_instance_dict = flight_instance_object.to_dict()
+                
                 if flight_instance_object.get_departure_airport().get_airport_code()  == departure_airport and flight_instance_object.get_destination_airport().get_airport_code()  == destination_airport:  
-                    found_flights.append(flight_instance_object)
-        
+                    found_flights.append(flight_instance_dict)
+
+            
         return found_flights

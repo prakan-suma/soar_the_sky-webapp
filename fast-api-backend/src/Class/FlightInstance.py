@@ -1,8 +1,9 @@
+import json
 from src.Class.Flight import Flight
 
 
 class FlightInstance(Flight):
-    def __init__(self, flight_no, duration_time, departure_airport, destination_airport, airplane, flight_seat, departure_date, destination_date, departure_time, arrival_time, price):
+    def __init__(self, flight_no, flight_seat, duration_time, departure_airport, destination_airport, airplane , departure_date, destination_date, departure_time, arrival_time, price):
         super().__init__(flight_no, duration_time, departure_airport, destination_airport)
         self.__airplane = airplane
         self.__flight_seat = flight_seat
@@ -39,3 +40,20 @@ class FlightInstance(Flight):
 
     def get_destination_airport(self):
         return self._Flight__destination_airport
+    
+    def to_dict(self):
+        flight_dict = {
+            "flight_no": self.get_flight_no(),
+            "flight_seat": self.__flight_seat,
+            "duration_time": self.get_duration_time(),
+            "departure_airport": self.get_departure_airport().to_dict(),
+            "destination_airport": self.get_destination_airport().to_dict(),
+            "airplane": self.__airplane.to_dict(),
+            "departure_date": self.__departure_date,
+            "destination_date": self.__destination_date,
+            "departure_time": self.__departure_time,
+            "arrival_time": self.__arrival_time,
+            "price": self.__price
+        }
+        return flight_dict
+

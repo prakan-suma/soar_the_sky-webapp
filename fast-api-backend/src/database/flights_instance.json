@@ -1,8 +1,9 @@
 [
     {
+        "flight_instance_id" : 1,
         "flight_no": "SV2553CX",
         "airplane_id": 1,
-        "flight_seat": [],
+        "flight_seat_list": [],
         "departure_date": "2024-03-01T00:00:00",
         "destination_date": "2024-03-01T00:00:00",
         "departure_time": "10:00",
@@ -10,9 +11,10 @@
         "price": 1490
     },
     {
+        "flight_instance_id" : 2,
         "flight_no": "SV2553CX",
         "airplane_id": 1,
-        "flight_seat": [],
+        "flight_seat_list": [],
         "departure_date": "2024-03-02T00:00:00",
         "destination_date": "2024-03-02T00:00:00",
         "departure_time": "10:00",
@@ -20,9 +22,10 @@
         "price": 1934
     },
     {
+        "flight_instance_id" : 3,
         "flight_no": "CX2556SV",
         "airplane_id": 2,
-        "flight_seat": [],
+        "flight_seat_list": [],
         "departure_date": "2024-03-01T00:00:00",
         "destination_date": "2024-03-01T00:00:00",
         "departure_time": "12:00",
@@ -30,9 +33,10 @@
         "price": 2344
     },
     {
+        "flight_instance_id" : 4,
         "flight_no": "CX2556SV",
         "airplane_id": 2,
-        "flight_seat": [],
+        "flight_seat_list": [],
         "departure_date": "2024-03-02T00:00:00",
         "destination_date": "2024-03-02T00:00:00",
         "departure_time": "12:00",

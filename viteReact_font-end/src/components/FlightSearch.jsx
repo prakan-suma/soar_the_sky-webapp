@@ -7,18 +7,24 @@ import { PiUsersBold } from "react-icons/pi";
 
 const FlightSearch = () => {
     const [tripType, setTripType] = useState('round-trip');
-    const [endpoint, setEndpoint] = useState('/api/search/round-trip');
+    const [departureAirport, setDepartureAirport] = useState('');
+    const [destinationAirport, setDestinationAirport] = useState('');
+    const [departureDate, setDepartureDate] = useState('');
+    const [returnDate, setReturnDate] = useState('');
 
     const handleTripTypeChange = (type) => {
         setTripType(type);
-        setEndpoint(type === 'round-trip' ? '/api/search/round-trip' : '/api/search/one-way');
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle form submission with the updated endpoint value
-        console.log('Form submitted with endpoint:', endpoint);
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if (tripType === 'one-way') {
+            window.location.href = `/api/flight/search/one-way/${departureAirport}/${destinationAirport}/${departureDate}`;
+        } else {
+            window.location.href = `/api/flight/search/one-way/${departureAirport}/${destinationAirport}/${departureDate}/${returnDate}`;
+        }
     };
+
 
     return (
         <section className='mb-60'>
@@ -80,6 +86,7 @@ const FlightSearch = () => {
                                 <label htmlFor="one-way">One Way</label>
                             </div>
 
+                            {/* Passenger */}
                             <div class="relative">
                                 {/* icon  */}
                                 <div class="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none">
@@ -99,8 +106,8 @@ const FlightSearch = () => {
 
                         {/* select section */}
                         <div className="flex mt-10">
-
                             <section className='flex gap-4 mb-6'>
+
                                 {/* origin airport */}
                                 <div class="relative drop-shadow-sm">
                                     {/* icon  */}
@@ -121,7 +128,7 @@ const FlightSearch = () => {
                                     <IoIosArrowForward />
                                 </div>
 
-                                {/* des airport */}
+                                {/* destination airport */}
                                 <div class="relative w-full drop-shadow-sm">
                                     {/* icon  */}
                                     <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -137,6 +144,7 @@ const FlightSearch = () => {
 
                                 </div>
 
+                                {/* departure date */}
                                 <div class="relative  drop-shadow-sm ms-5">
                                     {/* icon  */}
                                     <div class="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none">

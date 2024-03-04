@@ -20,3 +20,13 @@ class AirPort:
 
     def get_location(self):
         return self.__location
+
+    def to_dict(self):
+        airport_dict = {
+            "airport_id": self.__airport_id,
+            "airport_code": self.__airport_code,
+            "gate": self.__gate,
+            "name": self.__name,
+            "location": self.__location
+        }
+        return airport_dict

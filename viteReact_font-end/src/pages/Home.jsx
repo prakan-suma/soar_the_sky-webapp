@@ -8,8 +8,6 @@ const Home = () => {
 
             <FlightSearch />
 
-
-
             <section className=''>
                 <PopularCountry />
             </section>
