@@ -11,16 +11,17 @@ class AirPlane:
         return self.__airplane_id
     
     def create_instance():
-        airplane = []
+        airplane = [
+            AirPlane("SA-3499-C","Airbus",500,600,airplane),
+            AirPlane("S3-0320-C","Airbus",300,300,airplane),
+            AirPlane("BA-EP33-C","Boeing",500,600,airplane),
+            AirPlane("UK-PS99-C","Airbus",500,600,airplane),
+            AirPlane("PW-7893-C","Boeing",300,300,airplane),
+        ]
         
-        for _ in range(100):
-            airplane_id = f"SA-{random.randint(1000,9999)}-"
-            model = f"{random.choice(["Boeing" , 'Airbus'])}-{random.randint(700,900)}"
-            capacity = random.randint(50,500)
-            seat = random.choice([300,600])
-            airplane.append(AirPlane(airplane_id,model,capacity,seat))
         
-        return airplane 
+
+        return 
     
     def to_dict(self):
         return {

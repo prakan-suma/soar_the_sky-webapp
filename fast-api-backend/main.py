@@ -2,7 +2,7 @@
 from fastapi import FastAPI
 from routers import flights as flights
 from src.Controller import AirLineController
-from src.Class import AirPlane,AirPort,Flight
+from src.Class import AirPlane,AirPort,FlightInstance
 
 app = FastAPI()
 
@@ -26,7 +26,7 @@ async def airport_all():
     
 @app.get('/api/flight')
 async def flight():
-    return flight_list
+    return 
     
 
 # flight routes 
@@ -45,17 +45,12 @@ airline_controller.set_airport_list(airport_list)
 
 # create departure flights isinstance
 departure_flight_list = [
-    Flight.Flight("SA88234","60",airline_controller.search_from_id(1),airline_controller.search_from_id(2)),
-    Flight.Flight("FKN2340","90",airline_controller.search_from_id(1),airline_controller.search_from_id(3)),
-    Flight.Flight("IEO6442","120",airline_controller.search_from_id(1),airline_controller.search_from_id(4)),
-    Flight.Flight("JAZZ204","50",airline_controller.search_from_id(1),airline_controller.search_from_id(5)),
+    FlightInstance.FlightInstance("SDK212","120",airline_controller.search_from_id(1),airline_controller.search_from_id(3),None,airline_controller.search_airplane_from_id("SA-3499-C"),"2024-04-15","2024-04-15","10:00","12:00",2340)
 ]
 # create destination flights isinstance
 departure_flight_list = [
-    Flight.Flight("3EFK424","60",airline_controller.search_from_id(2),airline_controller.search_from_id(1)),
-    Flight.Flight("KKL20E4","90",airline_controller.search_from_id(3),airline_controller.search_from_id(1)),
-    Flight.Flight("HJS8990","120",airline_controller.search_from_id(4),airline_controller.search_from_id(1)),
-    Flight.Flight("ROV9302","50",airline_controller.search_from_id(5),airline_controller.search_from_id(1)),
+git ]
+
+flight_instance_list = [
+    
 ]
-
-
