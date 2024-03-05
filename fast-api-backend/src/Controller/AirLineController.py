@@ -1,5 +1,4 @@
 import json 
-from src.Class import AirPlane,AirPort,Flight,FlightSeat,FlightInstance   
 
 import datetime
 
@@ -17,7 +16,7 @@ class AirLineController:
     def get_airport_list(self):
         return self.__airport_list
     
-    def search_from_id(self,airport_id):
+    def search_airport_from_id(self,airport_id):
         for a in self.__airport_list:
             if airport_id == a.get_airport_id():
                 airport_obj = a
@@ -25,6 +24,16 @@ class AirLineController:
                 None
                 
         return airport_obj
+    
+    def search_airplane_from_id(self,airplane_id):
+        for a in self.__airport_list:
+            if airplane_id == a.get_airplane_id():
+                airplane_obj = a
+            else:
+                None
+                
+        return airplane_obj
+    
     
     def set_airport_list(self,airport_list):
         self.__airport_list = airport_list

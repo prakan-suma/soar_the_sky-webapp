@@ -45,11 +45,11 @@ airline_controller.set_airport_list(airport_list)
 
 # create departure flights isinstance
 departure_flight_list = [
-    FlightInstance.FlightInstance("SDK212","120",airline_controller.search_from_id(1),airline_controller.search_from_id(3),None,airline_controller.search_airplane_from_id("SA-3499-C"),"2024-04-15","2024-04-15","10:00","12:00",2340)
+    # FlightInstance.FlightInstance("SDK212","120",airline_controller.search_from_id(1),airline_controller.search_from_id(3),None,airline_controller.search_airplane_from_id("SA-3499-C"),"2024-04-15","2024-04-15","10:00","12:00",2340)
 ]
 # create destination flights isinstance
 departure_flight_list = [
-git ]
+]
 
 flight_instance_list = [
     

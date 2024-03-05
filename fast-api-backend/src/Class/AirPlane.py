@@ -12,16 +12,15 @@ class AirPlane:
     
     def create_instance():
         airplane = [
-            AirPlane("SA-3499-C","Airbus",500,600,airplane),
-            AirPlane("S3-0320-C","Airbus",300,300,airplane),
-            AirPlane("BA-EP33-C","Boeing",500,600,airplane),
-            AirPlane("UK-PS99-C","Airbus",500,600,airplane),
-            AirPlane("PW-7893-C","Boeing",300,300,airplane),
+            AirPlane("SA-3499-C","Airbus",500,600),
+            AirPlane("S3-0320-C","Airbus",300,300),
+            AirPlane("BA-EP33-C","Boeing",500,600),
+            AirPlane("UK-PS99-C","Airbus",500,600),
+            AirPlane("PW-7893-C","Boeing",300,300),
         ]
-        
-        
+    
 
-        return 
+        return airplane
     
     def to_dict(self):
         return {

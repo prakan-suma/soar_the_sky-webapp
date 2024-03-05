@@ -1,8 +1,8 @@
 import json
-from src.Class import Flight
+from src.Class.Flight import Flight 
 
 class FlightInstance(Flight):
-    def __init__(self, flight_no, duration_time, departure_airport, destination_airport, flight_seat, airplane, departure_date, destination_date, departure_time, arrival_time, price):
+    def __init__(self, flight_no, duration_time, departure_airport, destination_airport, airplane,flight_seat, departure_date, destination_date, departure_time, arrival_time, price):
         super().__init__(flight_no, duration_time, departure_airport, destination_airport)
         self.__airplane = airplane
         self.__flight_seat = flight_seat
