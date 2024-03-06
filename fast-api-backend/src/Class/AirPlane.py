@@ -18,7 +18,6 @@ class AirPlane:
             AirPlane("UK-PS99-C","Airbus",500,600),
             AirPlane("PW-7893-C","Boeing",300,300),
         ]
-    
 
         return airplane
     

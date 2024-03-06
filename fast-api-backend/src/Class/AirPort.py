@@ -1,8 +1,11 @@
+import json
+
+
 class AirPort:
     def __init__(self, airport_id, airport_code, gate, name, location):
         self.__airport_id = airport_id
         self.__airport_code = airport_code
-        self.__gate =  gate
+        self.__gate = gate
         self.__name = name
         self.__location = location
 
@@ -53,7 +56,7 @@ class AirPort:
         ]
 
         return thailand_airports
-    
+
     def to_dict(self):
         airport_dict = {
             "airport_id": self.__airport_id,
@@ -62,4 +65,5 @@ class AirPort:
             "name": self.__name,
             "location": self.__location
         }
+        
         return airport_dict

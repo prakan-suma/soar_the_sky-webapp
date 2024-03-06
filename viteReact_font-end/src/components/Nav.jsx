@@ -23,7 +23,7 @@ export default function Nav() {
                         </div>
                         <ul className="flex gap-20">
                             <li><a href="/">Home</a></li>
-                            <li><a href="/">Flights</a></li>
+                            <li><a href="#searchFlight">Flights</a></li>
                             <li><a href="/">Booking</a></li>
                         </ul>
                         <div className="flex items-center gap-8">
