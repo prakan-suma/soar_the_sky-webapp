@@ -7,6 +7,9 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import FlightOneWay from './pages/FlightOneWay';
 import FlightRoundTrip from './pages/FlightRoundTrip';
+import SignUp from './pages/SignUp';
+import Login from './pages/Login';
+
 
 function App() {
   return (
@@ -15,8 +18,10 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/flight/search/:tripType/:passenger/:departureAirport/:destinationAirport/:departureDate" component={FlightOneWay} />
-          <Route path="/flight/search/:tripType/:passenger/:departureAirport/:destinationAirport/:departureDate/:destinationDate" component={FlightRoundTrip} />
+          <Route path="/flight/search/one-way/:passenger/:departureAirport/:destinationAirport/:departureDate" component={FlightOneWay} />
+          <Route path="/flight/search/round-trip/:passenger/:departureAirport/:destinationAirport/:departureDate/:returnDate" component={FlightRoundTrip} />
+          <Route path="/register" component={SignUp} />
+          <Route path="/login" component={Login} />
         </Switch>
       </div>
       <Footer/>

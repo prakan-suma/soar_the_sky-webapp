@@ -77,9 +77,9 @@ const FlightSearch = () => {
 
         // Redirect or send data based on input validation
         if (tripType === 'one-way') {
-            history.push(`/flight/search/${tripType}/${passenger}/${departureAirport}/${destinationAirport}/${departureDate}`);
+            history.push(`/flight/search/one-way/${passenger}/${departureAirport}/${destinationAirport}/${departureDate}`);
         } else {
-            history.push(`/flight/search/${tripType}/${passenger}/${departureAirport}/${destinationAirport}/${departureDate}/${returnDate}`);
+            history.push(`/flight/search/round-trip/${passenger}/${departureAirport}/${destinationAirport}/${departureDate}/${returnDate}`);
         }
     };
 

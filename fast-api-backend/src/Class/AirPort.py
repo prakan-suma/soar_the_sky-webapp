@@ -65,5 +65,5 @@ class AirPort:
             "name": self.__name,
             "location": self.__location
         }
-        
+
         return airport_dict

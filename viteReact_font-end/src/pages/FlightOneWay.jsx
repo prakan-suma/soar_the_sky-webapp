@@ -1,28 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { AiOutlineSwapRight } from "react-icons/ai";
-import { PiHandbagSimple } from "react-icons/pi";
+import { PiHandbagSimple, PiAirplaneInFlightDuotone } from "react-icons/pi";
 
 function FlightOneWay() {
-    const { tripType, passenger, departureAirport, destinationAirport, departureDate } = useParams();
+    const { passenger, departureAirport, destinationAirport, departureDate } = useParams();
 
     const [flights, setFlights] = useState([]);
     const [isLoading, setIsLoading] = useState(false); // Added state to manage loading
+    const [noFlights, setNoFlights] = useState(false);
 
     useEffect(() => {
         setIsLoading(true); // Set loading to true while fetching data
-        fetch(`http://127.0.0.1:8000/api/flight/search/${tripType}/${passenger}/${departureAirport}/${destinationAirport}/${departureDate}/`)
+        fetch(`http://127.0.0.1:8000/api/flight/search/one-way/${passenger}/${departureAirport}/${destinationAirport}/${departureDate}/`)
             .then(response => response.json())
-            .then(data => { setFlights(data) })
+            .then(data => {
+                setFlights(data);
+                if (data.length === 0) {
+                    setNoFlights(true); // Set noFlights to true if there are no flights
+                }
+            })
             .catch(error => console.error('Error fetching data:', error))
             .finally(() => setIsLoading(false));
-    }, [tripType, passenger, departureAirport, destinationAirport, departureDate]); // Update on parameter changes
+    }, [passenger, departureAirport, destinationAirport, departureDate]); // Update on parameter changes
 
     return (
         <div className="container flex mx-auto my-28">
-            <div className="border w-1/4 p-10 rounded-md shadow-sm">
+            <div className="border w-1/3 p-10 rounded-md shadow-sm h-fit">
                 <h1 className="text-2xl text-cs-skye mb-5">Flights</h1>
-                <p className="text-lg mb-4">search {tripType}</p>
+                <p className="text-lg mb-4">Search one way </p>
 
                 <div className="flex">
                     <div className="flex flex-col gap-5 my-5 me-5">
@@ -42,15 +48,30 @@ function FlightOneWay() {
             </div>
 
             {/* Flight data */}
-            <div className="flex flex-row  ms-10 mx-auto w-full ">
+            <div className="flex flex-col ms-10 mx-auto w-full">
+                <div className="w-full flex mb-5">
+                    <div className="text-5xl pe-5">
+                        <PiAirplaneInFlightDuotone className='text-cs-skye' />
+                    </div>
+                    <div className="">
+                        <p className='mb-3 text-slate-700 text-2xl'>Depart</p>
+                        <p className='font-light text-gray-500'>{departureAirport} to {destinationAirport}</p>
+                    </div>
+                </div>
                 {isLoading ? (
                     // Display loading indicator while fetching data
                     <p>Fetching flights...</p>
+                ) : noFlights ? (
+                    // Display message if no flights are available
+                    <div className="rounded-lg bg-yellow-100 border-l-4 border-yellow-300 text-yellow-500 p-4" role="alert">
+                        <p class="font-bold">Be Warned</p>
+                        <p>We're sorry, but we couldn't find the depart flight.</p>
+                    </div>
                 ) : (
                     flights.length > 0 && (
-                        <div className='w-full '>
+                        <div className='w-full'>
                             {flights.map((flight) => (
-                                <div className='flex flex-col border rounded p-5 gap-5 mb-5 shadow-sm' key={flight.flight_no}>
+                                <div className='transition ease-in-out flex flex-col border rounded p-5 gap-5 mb-5 shadow-sm hover:shadow-md active:shadow-md transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none' key={flight.flight_no}>
                                     <div className="flex gap-5 items-center ">
                                         <img className='w-12 rounded-full border' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2kLv_uFO-rcIgyolahZ-4WOsrAhqg5T_Kow&usqp=CAU" alt="" />
                                         <p className='font-light'>Soar The Skye Airline</p>
@@ -77,7 +98,7 @@ function FlightOneWay() {
                                         </div>
 
                                         <div className="m-auto flex-col items-center gap-5">
-                                            <PiHandbagSimple className='text-2xl text-slate-600'/>
+                                            <PiHandbagSimple className='text-2xl text-slate-600' />
                                             <p className='text-xs'>7 kg.</p>
                                         </div>
 
@@ -94,6 +115,7 @@ function FlightOneWay() {
                         </div>
                     )
                 )}
+                
             </div>
         </div>
     );
