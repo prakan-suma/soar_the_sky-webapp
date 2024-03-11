@@ -1,304 +1,302 @@
-{
-    "airplanes": [
-        {
-            "airplane_id": 1,
-            "model": "Boeing 747",
-            "capacity": 400,
-            "seat": 350
-        },
-        {
-            "airplane_id": 2,
-            "model": "Airbus A380",
-            "capacity": 550,
-            "seat": 480
-        },
-        {
-            "airplane_id": 3,
-            "model": "Boeing 777",
-            "capacity": 350,
-            "seat": 300
-        },
-        {
-            "airplane_id": 4,
-            "model": "Airbus A320",
-            "capacity": 180,
-            "seat": 150
-        },
-        {
-            "airplane_id": 5,
-            "model": "Boeing 787",
-            "capacity": 250,
-            "seat": 220
-        },
-        {
-            "airplane_id": 6,
-            "model": "Embraer E190",
-            "capacity": 100,
-            "seat": 90
-        },
-        {
-            "airplane_id": 7,
-            "model": "Airbus A350",
-            "capacity": 300,
-            "seat": 280
-        },
-        {
-            "airplane_id": 8,
-            "model": "Boeing 737",
-            "capacity": 160,
-            "seat": 140
-        },
-        {
-            "airplane_id": 9,
-            "model": "Airbus A330",
-            "capacity": 290,
-            "seat": 260
-        },
-        {
-            "airplane_id": 10,
-            "model": "Bombardier CRJ900",
-            "capacity": 90,
-            "seat": 80
-        },
-        {
-            "airplane_id": 11,
-            "model": "Boeing 767",
-            "capacity": 250,
-            "seat": 220
-        },
-        {
-            "airplane_id": 12,
-            "model": "Airbus A321",
-            "capacity": 200,
-            "seat": 180
-        },
-        {
-            "airplane_id": 13,
-            "model": "Embraer E175",
-            "capacity": 80,
-            "seat": 70
-        },
-        {
-            "airplane_id": 14,
-            "model": "Boeing 717",
-            "capacity": 120,
-            "seat": 100
-        },
-        {
-            "airplane_id": 15,
-            "model": "Airbus A319",
-            "capacity": 140,
-            "seat": 120
-        },
-        {
-            "airplane_id": 16,
-            "model": "Bombardier Q400",
-            "capacity": 80,
-            "seat": 70
-        },
-        {
-            "airplane_id": 17,
-            "model": "ATR 72",
-            "capacity": 70,
-            "seat": 60
-        },
-        {
-            "airplane_id": 18,
-            "model": "Boeing 737 MAX",
-            "capacity": 200,
-            "seat": 180
-        },
-        {
-            "airplane_id": 19,
-            "model": "Airbus A318",
-            "capacity": 110,
-            "seat": 100
-        },
-        {
-            "airplane_id": 20,
-            "model": "Embraer E195",
-            "capacity": 110,
-            "seat": 100
-        },
-        {
-            "airplane_id": 21,
-            "model": "Bombardier CRJ700",
-            "capacity": 75,
-            "seat": 65
-        },
-        {
-            "airplane_id": 22,
-            "model": "Boeing 757",
-            "capacity": 240,
-            "seat": 210
-        },
-        {
-            "airplane_id": 23,
-            "model": "Airbus A330neo",
-            "capacity": 310,
-            "seat": 280
-        },
-        {
-            "airplane_id": 24,
-            "model": "Airbus A300",
-            "capacity": 250,
-            "seat": 220
-        },
-        {
-            "airplane_id": 25,
-            "model": "Embraer E170",
-            "capacity": 80,
-            "seat": 70
-        },
-        {
-            "airplane_id": 26,
-            "model": "Bombardier CRJ1000",
-            "capacity": 105,
-            "seat": 90
-        },
-        {
-            "airplane_id": 27,
-            "model": "Airbus A340",
-            "capacity": 320,
-            "seat": 280
-        },
-        {
-            "airplane_id": 28,
-            "model": "Boeing 727",
-            "capacity": 150,
-            "seat": 130
-        },
-        {
-            "airplane_id": 29,
-            "model": "Boeing 737 NG",
-            "capacity": 180,
-            "seat": 160
-        },
-        {
-            "airplane_id": 30,
-            "model": "Airbus A310",
-            "capacity": 220,
-            "seat": 200
-        },
-        {
-            "airplane_id": 31,
-            "model": "Embraer E145",
-            "capacity": 50,
-            "seat": 40
-        },
-        {
-            "airplane_id": 32,
-            "model": "Bombardier CRJ200",
-            "capacity": 50,
-            "seat": 40
-        },
-        {
-            "airplane_id": 33,
-            "model": "ATR 42",
-            "capacity": 50,
-            "seat": 40
-        },
-        {
-            "airplane_id": 34,
-            "model": "Boeing 707",
-            "capacity": 140,
-            "seat": 120
-        },
-        {
-            "airplane_id": 35,
-            "model": "Airbus A300-600",
-            "capacity": 250,
-            "seat": 220
-        },
-        {
-            "airplane_id": 36,
-            "model": "Embraer ERJ145",
-            "capacity": 50,
-            "seat": 40
-        },
-        {
-            "airplane_id": 37,
-            "model": "Bombardier CRJ550",
-            "capacity": 50,
-            "seat": 40
-        },
-        {
-            "airplane_id": 38,
-            "model": "Boeing 757-300",
-            "capacity": 300,
-            "seat": 260
-        },
-        {
-            "airplane_id": 39,
-            "model": "Airbus A321neo",
-            "capacity": 220,
-            "seat": 200
-        },
-        {
-            "airplane_id": 40,
-            "model": "Embraer ERJ135",
-            "capacity": 35,
-            "seat": 30
-        },
-        {
-            "airplane_id": 41,
-            "model": "ATR 72-600",
-            "capacity": 70,
-            "seat": 60
-        },
-        {
-            "airplane_id": 42,
-            "model": "Boeing 737 Classic",
-            "capacity": 140,
-            "seat": 120
-        },
-        {
-            "airplane_id": 43,
-            "model": "Airbus A318neo",
-            "capacity": 110,
-            "seat": 100
-        },
-        {
-            "airplane_id": 44,
-            "model": "Bombardier Dash 8",
-            "capacity": 70,
-            "seat": 60
-        },
-        {
-            "airplane_id": 45,
-            "model": "Boeing 737 Classic",
-            "capacity": 140,
-            "seat": 120
-        },
-        {
-            "airplane_id": 46,
-            "model": "Airbus A310 MRTT",
-            "capacity": 180,
-            "seat": 160
-        },
-        {
-            "airplane_id": 47,
-            "model": "Embraer E190-E2",
-            "capacity": 114,
-            "seat": 100
-        },
-        {
-            "airplane_id": 48,
-            "model": "Boeing 737-700",
-            "capacity": 150,
-            "seat": 130
-        },
-        {
-            "airplane_id": 49,
-            "model": "Airbus A319neo",
-            "capacity": 160,
-            "seat": 140
-        },
-        {
-            "airplane_id": 50,
-            "model": "ATR 42-600",
-            "capacity": 50,
-            "seat": 40
-        }
-    ]
-}
+[
+    {
+        "airplane_id": 1,
+        "model": "Boeing 747",
+        "capacity": 400,
+        "seat": 350
+    },
+    {
+        "airplane_id": 2,
+        "model": "Airbus A380",
+        "capacity": 550,
+        "seat": 480
+    },
+    {
+        "airplane_id": 3,
+        "model": "Boeing 777",
+        "capacity": 350,
+        "seat": 300
+    },
+    {
+        "airplane_id": 4,
+        "model": "Airbus A320",
+        "capacity": 180,
+        "seat": 150
+    },
+    {
+        "airplane_id": 5,
+        "model": "Boeing 787",
+        "capacity": 250,
+        "seat": 220
+    },
+    {
+        "airplane_id": 6,
+        "model": "Embraer E190",
+        "capacity": 100,
+        "seat": 90
+    },
+    {
+        "airplane_id": 7,
+        "model": "Airbus A350",
+        "capacity": 300,
+        "seat": 280
+    },
+    {
+        "airplane_id": 8,
+        "model": "Boeing 737",
+        "capacity": 160,
+        "seat": 140
+    },
+    {
+        "airplane_id": 9,
+        "model": "Airbus A330",
+        "capacity": 290,
+        "seat": 260
+    },
+    {
+        "airplane_id": 10,
+        "model": "Bombardier CRJ900",
+        "capacity": 90,
+        "seat": 80
+    },
+    {
+        "airplane_id": 11,
+        "model": "Boeing 767",
+        "capacity": 250,
+        "seat": 220
+    },
+    {
+        "airplane_id": 12,
+        "model": "Airbus A321",
+        "capacity": 200,
+        "seat": 180
+    },
+    {
+        "airplane_id": 13,
+        "model": "Embraer E175",
+        "capacity": 80,
+        "seat": 70
+    },
+    {
+        "airplane_id": 14,
+        "model": "Boeing 717",
+        "capacity": 120,
+        "seat": 100
+    },
+    {
+        "airplane_id": 15,
+        "model": "Airbus A319",
+        "capacity": 140,
+        "seat": 120
+    },
+    {
+        "airplane_id": 16,
+        "model": "Bombardier Q400",
+        "capacity": 80,
+        "seat": 70
+    },
+    {
+        "airplane_id": 17,
+        "model": "ATR 72",
+        "capacity": 70,
+        "seat": 60
+    },
+    {
+        "airplane_id": 18,
+        "model": "Boeing 737 MAX",
+        "capacity": 200,
+        "seat": 180
+    },
+    {
+        "airplane_id": 19,
+        "model": "Airbus A318",
+        "capacity": 110,
+        "seat": 100
+    },
+    {
+        "airplane_id": 20,
+        "model": "Embraer E195",
+        "capacity": 110,
+        "seat": 100
+    },
+    {
+        "airplane_id": 21,
+        "model": "Bombardier CRJ700",
+        "capacity": 75,
+        "seat": 65
+    },
+    {
+        "airplane_id": 22,
+        "model": "Boeing 757",
+        "capacity": 240,
+        "seat": 210
+    },
+    {
+        "airplane_id": 23,
+        "model": "Airbus A330neo",
+        "capacity": 310,
+        "seat": 280
+    },
+    {
+        "airplane_id": 24,
+        "model": "Airbus A300",
+        "capacity": 250,
+        "seat": 220
+    },
+    {
+        "airplane_id": 25,
+        "model": "Embraer E170",
+        "capacity": 80,
+        "seat": 70
+    },
+    {
+        "airplane_id": 26,
+        "model": "Bombardier CRJ1000",
+        "capacity": 105,
+        "seat": 90
+    },
+    {
+        "airplane_id": 27,
+        "model": "Airbus A340",
+        "capacity": 320,
+        "seat": 280
+    },
+    {
+        "airplane_id": 28,
+        "model": "Boeing 727",
+        "capacity": 150,
+        "seat": 130
+    },
+    {
+        "airplane_id": 29,
+        "model": "Boeing 737 NG",
+        "capacity": 180,
+        "seat": 160
+    },
+    {
+        "airplane_id": 30,
+        "model": "Airbus A310",
+        "capacity": 220,
+        "seat": 200
+    },
+    {
+        "airplane_id": 31,
+        "model": "Embraer E145",
+        "capacity": 50,
+        "seat": 40
+    },
+    {
+        "airplane_id": 32,
+        "model": "Bombardier CRJ200",
+        "capacity": 50,
+        "seat": 40
+    },
+    {
+        "airplane_id": 33,
+        "model": "ATR 42",
+        "capacity": 50,
+        "seat": 40
+    },
+    {
+        "airplane_id": 34,
+        "model": "Boeing 707",
+        "capacity": 140,
+        "seat": 120
+    },
+    {
+        "airplane_id": 35,
+        "model": "Airbus A300-600",
+        "capacity": 250,
+        "seat": 220
+    },
+    {
+        "airplane_id": 36,
+        "model": "Embraer ERJ145",
+        "capacity": 50,
+        "seat": 40
+    },
+    {
+        "airplane_id": 37,
+        "model": "Bombardier CRJ550",
+        "capacity": 50,
+        "seat": 40
+    },
+    {
+        "airplane_id": 38,
+        "model": "Boeing 757-300",
+        "capacity": 300,
+        "seat": 260
+    },
+    {
+        "airplane_id": 39,
+        "model": "Airbus A321neo",
+        "capacity": 220,
+        "seat": 200
+    },
+    {
+        "airplane_id": 40,
+        "model": "Embraer ERJ135",
+        "capacity": 35,
+        "seat": 30
+    },
+    {
+        "airplane_id": 41,
+        "model": "ATR 72-600",
+        "capacity": 70,
+        "seat": 60
+    },
+    {
+        "airplane_id": 42,
+        "model": "Boeing 737 Classic",
+        "capacity": 140,
+        "seat": 120
+    },
+    {
+        "airplane_id": 43,
+        "model": "Airbus A318neo",
+        "capacity": 110,
+        "seat": 100
+    },
+    {
+        "airplane_id": 44,
+        "model": "Bombardier Dash 8",
+        "capacity": 70,
+        "seat": 60
+    },
+    {
+        "airplane_id": 45,
+        "model": "Boeing 737 Classic",
+        "capacity": 140,
+        "seat": 120
+    },
+    {
+        "airplane_id": 46,
+        "model": "Airbus A310 MRTT",
+        "capacity": 180,
+        "seat": 160
+    },
+    {
+        "airplane_id": 47,
+        "model": "Embraer E190-E2",
+        "capacity": 114,
+        "seat": 100
+    },
+    {
+        "airplane_id": 48,
+        "model": "Boeing 737-700",
+        "capacity": 150,
+        "seat": 130
+    },
+    {
+        "airplane_id": 49,
+        "model": "Airbus A319neo",
+        "capacity": 160,
+        "seat": 140
+    },
+    {
+        "airplane_id": 50,
+        "model": "ATR 42-600",
+        "capacity": 50,
+        "seat": 40
+    }
+]

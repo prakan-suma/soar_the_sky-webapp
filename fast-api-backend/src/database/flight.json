@@ -1,402 +1,76 @@
-[
-    {
-        "1": {
-            "flight_no": "AVF672BNM",
-            "duration_time": 50,
+{
+    "1": [
+        {
+            "flight_no": "BN101",
             "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "XKV654YZN",
-            "duration_time": 50,
+            "destination_airport": 3,
+            "departure_time": "06:00",
+            "arrival_time": "07:00"
+        },
+        {
+            "flight_no": "BN102",
             "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "GNJ516EIS",
-            "duration_time": 50,
+            "destination_airport": 3,
+            "departure_time": "09:00",
+            "arrival_time": "10:00"
+        },
+        {
+            "flight_no": "BN103",
             "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "JOC577UST",
-            "duration_time": 50,
+            "destination_airport": 3,
+            "departure_time": "12:00",
+            "arrival_time": "13:00"
+        },
+        {
+            "flight_no": "BN104",
             "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "SGZ272AMI",
-            "duration_time": 50,
+            "destination_airport": 3,
+            "departure_time": "15:00",
+            "arrival_time": "16:00"
+        },
+        {
+            "flight_no": "BN105",
             "departure_airport": 1,
-            "destination_airport": 3
+            "destination_airport": 3,
+            "departure_time": "18:00",
+            "arrival_time": "19:00"
         }
-    },
-    {
-        "1": {
-            "flight_no": "WTM617XWC",
-            "duration_time": 60,
-            "departure_airport": 1,
-            "destination_airport": 3
+    ],
+    "3": [
+        {
+            "flight_no": "CX101",
+            "departure_airport": 3,
+            "destination_airport": 1,
+            "departure_time": "08:00",
+            "arrival_time": "09:00"
+        },
+        {
+            "flight_no": "CX101",
+            "departure_airport": 3,
+            "destination_airport": 1,
+            "departure_time": "11:00",
+            "arrival_time": "12:00"
+        },
+        {
+            "flight_no": "CX101",
+            "departure_airport": 3,
+            "destination_airport": 1,
+            "departure_time": "14:00",
+            "arrival_time": "15:00"
+        },
+        {
+            "flight_no": "CX101",
+            "departure_airport": 3,
+            "destination_airport": 1,
+            "departure_time": "16:00",
+            "arrival_time": "18:00"
+        },
+        {
+            "flight_no": "CX101",
+            "departure_airport": 3,
+            "destination_airport": 1,
+            "departure_time": "19:00",
+            "arrival_time": "20:00"
         }
-    },
-    {
-        "1": {
-            "flight_no": "IUB761XLF",
-            "duration_time": 60,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "HZE184JAK",
-            "duration_time": 90,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "MXR525AUN",
-            "duration_time": 100,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "IEV866MEJ",
-            "duration_time": 60,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "PSG272LEY",
-            "duration_time": 50,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "WTW589SDC",
-            "duration_time": 60,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "XEY522ARK",
-            "duration_time": 50,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "DJF856KXS",
-            "duration_time": 60,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "BVR551FIO",
-            "duration_time": 100,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "PWS604DPH",
-            "duration_time": 100,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "SEU190KLX",
-            "duration_time": 60,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "GMO934PQC",
-            "duration_time": 50,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "QSS641ENL",
-            "duration_time": 90,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "ZPM685LHY",
-            "duration_time": 50,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "FQY953ZGZ",
-            "duration_time": 60,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "KJE365TNM",
-            "duration_time": 60,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "DCA238GAO",
-            "duration_time": 60,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "GHA278YZI",
-            "duration_time": 90,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "YFL982BLI",
-            "duration_time": 100,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "SXJ235RCB",
-            "duration_time": 50,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "ZVO190LOC",
-            "duration_time": 90,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "BOF601MNU",
-            "duration_time": 100,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "EIQ482AWR",
-            "duration_time": 50,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "ZUH550XWS",
-            "duration_time": 60,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "MEA321MLQ",
-            "duration_time": 60,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "SHZ574MKO",
-            "duration_time": 90,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "TOD101DUG",
-            "duration_time": 50,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "NCX697KZP",
-            "duration_time": 100,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "YHK709JOJ",
-            "duration_time": 60,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "WCG283YQO",
-            "duration_time": 90,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "MYK711XVO",
-            "duration_time": 90,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "XNT191QPL",
-            "duration_time": 100,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "VPN836HHN",
-            "duration_time": 50,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "XWU589NKK",
-            "duration_time": 90,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "PJS363JOX",
-            "duration_time": 90,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "TAL594KNZ",
-            "duration_time": 90,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "GBH461XQA",
-            "duration_time": 90,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "EMO501FVE",
-            "duration_time": 50,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "PYB672VEZ",
-            "duration_time": 90,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "WRP163WXJ",
-            "duration_time": 100,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "OQX898GNW",
-            "duration_time": 60,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "UXU836TRV",
-            "duration_time": 60,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "JRB567IJK",
-            "duration_time": 60,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    },
-    {
-        "1": {
-            "flight_no": "WKX932ZBZ",
-            "duration_time": 60,
-            "departure_airport": 1,
-            "destination_airport": 3
-        }
-    }
-]
+    ]
+}

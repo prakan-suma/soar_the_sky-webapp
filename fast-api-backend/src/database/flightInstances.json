@@ -1,0 +1,623 @@
+[
+    {
+        "flight_no": "BN101",
+        "departure_airport": 1,
+        "destination_airport": 3,
+        "departure_time": "06:00",
+        "arrival_time": "07:00",
+        "duration_time": "1:00:00",
+        "airplane": 1,
+        "price": 1143,
+        "departure_date": [
+            {
+                "2024-03-10": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-11": {
+                    "flight_seat": []
+                }
+            },
+    
+            {
+                "2024-03-12": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-13": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-14": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-15": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-16": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-17": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-18": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-19": {
+                    "flight_seat": []
+                }
+            }
+        ]
+    },
+    {
+        "flight_no": "BN102",
+        "departure_airport": 1,
+        "destination_airport": 3,
+        "departure_time": "09:00",
+        "arrival_time": "10:00",
+        "duration_time": "1:00:00",
+        "airplane": 1,
+        "price": 1442,
+        "departure_date": [
+            {
+                "2024-03-10": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-11": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-12": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-13": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-14": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-15": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-16": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-17": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-18": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-19": {
+                    "flight_seat": []
+                }
+            }
+        ]
+    },
+    {
+        "flight_no": "BN103",
+        "departure_airport": 1,
+        "destination_airport": 3,
+        "departure_time": "12:00",
+        "arrival_time": "13:00",
+        "duration_time": "1:00:00",
+        "airplane": 1,
+        "price": 1785,
+        "departure_date": [
+            {
+                "2024-03-10": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-11": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-12": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-13": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-14": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-15": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-16": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-17": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-18": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-19": {
+                    "flight_seat": []
+                }
+            }
+        ]
+    },
+    {
+        "flight_no": "BN104",
+        "departure_airport": 1,
+        "destination_airport": 3,
+        "departure_time": "15:00",
+        "arrival_time": "16:00",
+        "duration_time": "1:00:00",
+        "airplane": 1,
+        "price": 1612,
+        "departure_date": [
+            {
+                "2024-03-10": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-11": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-12": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-13": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-14": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-15": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-16": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-17": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-18": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-19": {
+                    "flight_seat": []
+                }
+            }
+        ]
+    },
+    {
+        "flight_no": "BN105",
+        "departure_airport": 1,
+        "destination_airport": 3,
+        "departure_time": "18:00",
+        "arrival_time": "19:00",
+        "duration_time": "1:00:00",
+        "airplane": 1,
+        "price": 1122,
+        "departure_date": [
+            {
+                "2024-03-10": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-11": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-12": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-13": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-14": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-15": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-16": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-17": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-18": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-19": {
+                    "flight_seat": []
+                }
+            }
+        ]
+    },
+    {
+        "flight_no": "CX101",
+        "departure_airport": 3,
+        "destination_airport": 1,
+        "departure_time": "08:00",
+        "arrival_time": "09:00",
+        "duration_time": "1:00:00",
+        "airplane": 1,
+        "price": 1538,
+        "departure_date": [
+            {
+                "2024-03-10": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-11": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-12": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-13": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-14": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-15": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-16": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-17": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-18": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-19": {
+                    "flight_seat": []
+                }
+            }
+        ]
+    },
+    {
+        "flight_no": "CX102",
+        "departure_airport": 3,
+        "destination_airport": 1,
+        "departure_time": "11:00",
+        "arrival_time": "12:00",
+        "duration_time": "1:00:00",
+        "airplane": 1,
+        "price": 1041,
+        "departure_date": [
+            {
+                "2024-03-10": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-11": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-12": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-13": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-14": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-15": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-16": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-17": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-18": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-19": {
+                    "flight_seat": []
+                }
+            }
+        ]
+    },
+    {
+        "flight_no": "CX103",
+        "departure_airport": 3,
+        "destination_airport": 1,
+        "departure_time": "14:00",
+        "arrival_time": "15:00",
+        "duration_time": "1:00:00",
+        "airplane": 1,
+        "price": 1299,
+        "departure_date": [
+            {
+                "2024-03-10": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-11": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-12": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-13": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-14": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-15": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-16": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-17": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-18": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-19": {
+                    "flight_seat": []
+                }
+            }
+        ]
+    },
+    {
+        "flight_no": "CX104",
+        "departure_airport": 3,
+        "destination_airport": 1,
+        "departure_time": "16:00",
+        "arrival_time": "18:00",
+        "duration_time": "2:00:00",
+        "airplane": 1,
+        "price": 1256,
+        "departure_date": [
+            {
+                "2024-03-10": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-11": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-12": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-13": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-14": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-15": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-16": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-17": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-18": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-19": {
+                    "flight_seat": []
+                }
+            }
+        ]
+    },
+    {
+        "flight_no": "CX105",
+        "departure_airport": 3,
+        "destination_airport": 1,
+        "departure_time": "19:00",
+        "arrival_time": "20:00",
+        "duration_time": "1:00:00",
+        "airplane": 1,
+        "price": 1731,
+        "departure_date": [
+            {
+                "2024-03-10": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-11": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-12": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-13": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-14": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-15": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-16": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-17": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-18": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-19": {
+                    "flight_seat": []
+                }
+            }
+        ]
+    }
+]

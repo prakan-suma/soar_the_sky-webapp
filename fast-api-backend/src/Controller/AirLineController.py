@@ -32,15 +32,14 @@ class AirLineController:
 
     # search method
     def search_flight_one_way(self, departureAirport, destinationAirport, departureDate):
-
         flight_found = []
-
-        # search flight from departureAirport,destinationAirport,departureDate
+    # search flight from departureAirport,destinationAirport,departureDate
         for flight in self.__flight_instance_list:
-            if flight.get_departure_airport().get_airport_code() == departureAirport and flight.get_destination_airport().get_airport_code() == destinationAirport and flight.get_departure_date() == departureDate:
+            if flight.departure_airport.airport_code == departureAirport and flight.destination_airport.airport_code == destinationAirport:
                 flight_found.append(flight)
 
         return flight_found
+
 
     def search_flight_round_trip(self, departureAirport, destinationAirport, departureDate, returnDate):
         departure_flight = []
@@ -49,11 +48,10 @@ class AirLineController:
         # search flight from departureAirport,destinationAirport,departureDate,destinationDate
         for flight in self.__flight_instance_list:
             # found departure flights
-            if flight.get_departure_airport().get_airport_code() == departureAirport and flight.get_destination_airport().get_airport_code() == destinationAirport and flight.get_departure_date() == departureDate:
+            if flight.departure_airport.airport_code == departureAirport and flight.destination_airport.airport_code == destinationAirport:
                 departure_flight.append(flight)
-
-            # found return flight
-            if flight.get_departure_airport().get_airport_code() == destinationAirport and flight.get_destination_airport().get_airport_code() == departureAirport and flight.get_departure_date() == returnDate:
+                
+            if flight.departure_airport.airport_code == destinationAirport and flight.destination_airport.airport_code == departureAirport :
                 return_flight.append(flight)
 
         return departure_flight, return_flight

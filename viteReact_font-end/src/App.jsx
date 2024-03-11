@@ -14,7 +14,7 @@ import Login from './pages/Login';
 function App() {
   return (
     <Router>
-      <div className=''>
+      <div>
         <Nav />
         <Switch>
           <Route exact path="/" component={Home} />

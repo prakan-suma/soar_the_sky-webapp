@@ -1,29 +1,37 @@
-class Flight:
 
-    def __init__(self, flight_no, duration_time, departure_airport, destination_airport):
+class Flight:
+    def __init__(self, flight_no, departure_airport, destination_airport, departure_time, arrival_time):
         self.__flight_no = flight_no
-        self.__duration_time = duration_time
         self.__departure_airport = departure_airport
         self.__destination_airport = destination_airport
+        self.__departure_time = departure_time
+        self.__arrival_time = arrival_time
 
-    # Getter methods
-    def get_flight_no(self):
+    @property
+    def flight_no(self):
         return self.__flight_no
 
-    def get_duration_time(self):
-        return self.__duration_time
-
-    def get_departure_airport(self):
+    @property
+    def departure_airport(self):
         return self.__departure_airport
 
-    def get_destination_airport(self):
+    @property
+    def destination_airport(self):
         return self.__destination_airport
-    
+
+    @property
+    def departure_time(self):
+        return self.__departure_time
+
+    @property
+    def arrival_time(self):
+        return self.__arrival_time
+
     def to_dict(self):
-        flight_dict = {
-            "flight_no": self.__flight_no,
-            "duration_time": self.__duration_time,
-            "departure_airport": self.__departure_airport.to_dict(),
-            "destination_airport": self.__destination_airport.to_dict()
+        return {
+            'flight_no': self.__flight_no,
+            'departure_airport': self.__departure_airport.to_dict(),
+            'destination_airport': self.__destination_airport.to_dict(),
+            'departure_time': self.__departure_time,
+            'arrival_time': self.__arrival_time
         }
-        return flight_dict

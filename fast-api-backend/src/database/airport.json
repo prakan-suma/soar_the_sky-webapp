@@ -1,345 +1,343 @@
-{
-    "airports": [
-        {
-            "airport_id": 1,
-            "airport_code": "BKK",
-            "gate": [
-                "Gate A1",
-                "Gate A2",
-                "Gate A3"
-            ],
-            "name": "Suvarnabhumi Airport",
-            "location": "Bangkok"
-        },
-        {
-            "airport_id": 2,
-            "airport_code": "HKT",
-            "gate": [
-                "Gate B1",
-                "Gate B2",
-                "Gate B3"
-            ],
-            "name": "Phuket International Airport",
-            "location": "Phuket"
-        },
-        {
-            "airport_id": 3,
-            "airport_code": "CNX",
-            "gate": [
-                "Gate C1",
-                "Gate C2",
-                "Gate C3"
-            ],
-            "name": "Chiang Mai International Airport",
-            "location": "Chiang Mai"
-        },
-        {
-            "airport_id": 4,
-            "airport_code": "KBV",
-            "gate": [
-                "Gate D1",
-                "Gate D2",
-                "Gate D3"
-            ],
-            "name": "Krabi International Airport",
-            "location": "Krabi"
-        },
-        {
-            "airport_id": 5,
-            "airport_code": "DMK",
-            "gate": [
-                "Gate E1",
-                "Gate E2",
-                "Gate E3"
-            ],
-            "name": "Don Mueang International Airport",
-            "location": "Bangkok"
-        },
-        {
-            "airport_id": 6,
-            "airport_code": "CEI",
-            "gate": [
-                "Gate F1",
-                "Gate F2",
-                "Gate F3"
-            ],
-            "name": "Chiang Rai International Airport",
-            "location": "Chiang Rai"
-        },
-        {
-            "airport_id": 7,
-            "airport_code": "UTP",
-            "gate": [
-                "Gate G1",
-                "Gate G2",
-                "Gate G3"
-            ],
-            "name": "U-Tapao International Airport",
-            "location": "Pattaya"
-        },
-        {
-            "airport_id": 8,
-            "airport_code": "HDY",
-            "gate": [
-                "Gate H1",
-                "Gate H2",
-                "Gate H3"
-            ],
-            "name": "Hat Yai International Airport",
-            "location": "Hat Yai"
-        },
-        {
-            "airport_id": 9,
-            "airport_code": "USM",
-            "gate": [
-                "Gate I1",
-                "Gate I2",
-                "Gate I3"
-            ],
-            "name": "Samui International Airport",
-            "location": "Koh Samui"
-        },
-        {
-            "airport_id": 10,
-            "airport_code": "URT",
-            "gate": [
-                "Gate J1",
-                "Gate J2",
-                "Gate J3"
-            ],
-            "name": "Surat Thani Airport",
-            "location": "Surat Thani"
-        },
-        {
-            "airport_id": 11,
-            "airport_code": "MAQ",
-            "gate": [
-                "Gate K1",
-                "Gate K2",
-                "Gate K3"
-            ],
-            "name": "Mae Sot Airport",
-            "location": "Tak"
-        },
-        {
-            "airport_id": 12,
-            "airport_code": "NST",
-            "gate": [
-                "Gate L1",
-                "Gate L2",
-                "Gate L3"
-            ],
-            "name": "Nakhon Si Thammarat Airport",
-            "location": "Nakhon Si Thammarat"
-        },
-        {
-            "airport_id": 13,
-            "airport_code": "UBP",
-            "gate": [
-                "Gate M1",
-                "Gate M2",
-                "Gate M3"
-            ],
-            "name": "Ubon Ratchathani Airport",
-            "location": "Ubon Ratchathani"
-        },
-        {
-            "airport_id": 14,
-            "airport_code": "UTH",
-            "gate": [
-                "Gate N1",
-                "Gate N2",
-                "Gate N3"
-            ],
-            "name": "Udon Thani Airport",
-            "location": "Udon Thani"
-        },
-        {
-            "airport_id": 15,
-            "airport_code": "LPT",
-            "gate": [
-                "Gate O1",
-                "Gate O2",
-                "Gate O3"
-            ],
-            "name": "Lampang Airport",
-            "location": "Lampang"
-        },
-        {
-            "airport_id": 16,
-            "airport_code": "BFV",
-            "gate": [
-                "Gate P1",
-                "Gate P2",
-                "Gate P3"
-            ],
-            "name": "Buri Ram Airport",
-            "location": "Buri Ram"
-        },
-        {
-            "airport_id": 17,
-            "airport_code": "LOE",
-            "gate": [
-                "Gate Q1",
-                "Gate Q2",
-                "Gate Q3"
-            ],
-            "name": "Loei Airport",
-            "location": "Loei"
-        },
-        {
-            "airport_id": 18,
-            "airport_code": "UNN",
-            "gate": [
-                "Gate R1",
-                "Gate R2",
-                "Gate R3"
-            ],
-            "name": "Ranong Airport",
-            "location": "Ranong"
-        },
-        {
-            "airport_id": 19,
-            "airport_code": "KKC",
-            "gate": [
-                "Gate S1",
-                "Gate S2",
-                "Gate S3"
-            ],
-            "name": "Khon Kaen Airport",
-            "location": "Khon Kaen"
-        },
-        {
-            "airport_id": 20,
-            "airport_code": "PHS",
-            "gate": [
-                "Gate T1",
-                "Gate T2",
-                "Gate T3"
-            ],
-            "name": "Phitsanulok Airport",
-            "location": "Phitsanulok"
-        },
-        {
-            "airport_id": 21,
-            "airport_code": "THS",
-            "gate": [
-                "Gate U1",
-                "Gate U2",
-                "Gate U3"
-            ],
-            "name": "Sukhothai Airport",
-            "location": "Sukhothai"
-        },
-        {
-            "airport_id": 22,
-            "airport_code": "SNO",
-            "gate": [
-                "Gate V1",
-                "Gate V2",
-                "Gate V3"
-            ],
-            "name": "Sakon Nakhon Airport",
-            "location": "Sakon Nakhon"
-        },
-        {
-            "airport_id": 23,
-            "airport_code": "CJM",
-            "gate": [
-                "Gate W1",
-                "Gate W2",
-                "Gate W3"
-            ],
-            "name": "Chumphon Airport",
-            "location": "Chumphon"
-        },
-        {
-            "airport_id": 24,
-            "airport_code": "TST",
-            "gate": [
-                "Gate X1",
-                "Gate X2",
-                "Gate X3"
-            ],
-            "name": "Trang Airport",
-            "location": "Trang"
-        },
-        {
-            "airport_id": 25,
-            "airport_code": "TDX",
-            "gate": [
-                "Gate Y1",
-                "Gate Y2",
-                "Gate Y3"
-            ],
-            "name": "Trat Airport",
-            "location": "Trat"
-        },
-        {
-            "airport_id": 26,
-            "airport_code": "HGN",
-            "gate": [
-                "Gate Z1",
-                "Gate Z2",
-                "Gate Z3"
-            ],
-            "name": "Mae Hong Son Airport",
-            "location": "Mae Hong Son"
-        },
-        {
-            "airport_id": 27,
-            "airport_code": "HHQ",
-            "gate": [
-                "Gate AA1",
-                "Gate AA2",
-                "Gate AA3"
-            ],
-            "name": "Hua Hin Airport",
-            "location": "Hua Hin"
-        },
-        {
-            "airport_id": 28,
-            "airport_code": "NAW",
-            "gate": [
-                "Gate BB1",
-                "Gate BB2",
-                "Gate BB3"
-            ],
-            "name": "Narathiwat Airport",
-            "location": "Narathiwat"
-        },
-        {
-            "airport_id": 29,
-            "airport_code": "ROI",
-            "gate": [
-                "Gate CC1",
-                "Gate CC2",
-                "Gate CC3"
-            ],
-            "name": "Roi Et Airport",
-            "location": "Roi Et"
-        },
-        {
-            "airport_id": 30,
-            "airport_code": "NNT",
-            "gate": [
-                "Gate DD1",
-                "Gate DD2",
-                "Gate DD3"
-            ],
-            "name": "Nan Airport",
-            "location": "Nan"
-        },
-        {
-            "airport_id": 31,
-            "airport_code": "KOP",
-            "gate": [
-                "Gate EE1",
-                "Gate EE2",
-                "Gate EE3"
-            ],
-            "name": "Nakhon Phanom Airport",
-            "location": "Nakhon Phanom"
-        }
-    ]
-}
+[
+    {
+        "airport_id": 1,
+        "airport_code": "BKK",
+        "gate": [
+            "Gate A1",
+            "Gate A2",
+            "Gate A3"
+        ],
+        "name": "Suvarnabhumi Airport",
+        "location": "Bangkok"
+    },
+    {
+        "airport_id": 2,
+        "airport_code": "HKT",
+        "gate": [
+            "Gate B1",
+            "Gate B2",
+            "Gate B3"
+        ],
+        "name": "Phuket International Airport",
+        "location": "Phuket"
+    },
+    {
+        "airport_id": 3,
+        "airport_code": "CNX",
+        "gate": [
+            "Gate C1",
+            "Gate C2",
+            "Gate C3"
+        ],
+        "name": "Chiang Mai International Airport",
+        "location": "Chiang Mai"
+    },
+    {
+        "airport_id": 4,
+        "airport_code": "KBV",
+        "gate": [
+            "Gate D1",
+            "Gate D2",
+            "Gate D3"
+        ],
+        "name": "Krabi International Airport",
+        "location": "Krabi"
+    },
+    {
+        "airport_id": 5,
+        "airport_code": "DMK",
+        "gate": [
+            "Gate E1",
+            "Gate E2",
+            "Gate E3"
+        ],
+        "name": "Don Mueang International Airport",
+        "location": "Bangkok"
+    },
+    {
+        "airport_id": 6,
+        "airport_code": "CEI",
+        "gate": [
+            "Gate F1",
+            "Gate F2",
+            "Gate F3"
+        ],
+        "name": "Chiang Rai International Airport",
+        "location": "Chiang Rai"
+    },
+    {
+        "airport_id": 7,
+        "airport_code": "UTP",
+        "gate": [
+            "Gate G1",
+            "Gate G2",
+            "Gate G3"
+        ],
+        "name": "U-Tapao International Airport",
+        "location": "Pattaya"
+    },
+    {
+        "airport_id": 8,
+        "airport_code": "HDY",
+        "gate": [
+            "Gate H1",
+            "Gate H2",
+            "Gate H3"
+        ],
+        "name": "Hat Yai International Airport",
+        "location": "Hat Yai"
+    },
+    {
+        "airport_id": 9,
+        "airport_code": "USM",
+        "gate": [
+            "Gate I1",
+            "Gate I2",
+            "Gate I3"
+        ],
+        "name": "Samui International Airport",
+        "location": "Koh Samui"
+    },
+    {
+        "airport_id": 10,
+        "airport_code": "URT",
+        "gate": [
+            "Gate J1",
+            "Gate J2",
+            "Gate J3"
+        ],
+        "name": "Surat Thani Airport",
+        "location": "Surat Thani"
+    },
+    {
+        "airport_id": 11,
+        "airport_code": "MAQ",
+        "gate": [
+            "Gate K1",
+            "Gate K2",
+            "Gate K3"
+        ],
+        "name": "Mae Sot Airport",
+        "location": "Tak"
+    },
+    {
+        "airport_id": 12,
+        "airport_code": "NST",
+        "gate": [
+            "Gate L1",
+            "Gate L2",
+            "Gate L3"
+        ],
+        "name": "Nakhon Si Thammarat Airport",
+        "location": "Nakhon Si Thammarat"
+    },
+    {
+        "airport_id": 13,
+        "airport_code": "UBP",
+        "gate": [
+            "Gate M1",
+            "Gate M2",
+            "Gate M3"
+        ],
+        "name": "Ubon Ratchathani Airport",
+        "location": "Ubon Ratchathani"
+    },
+    {
+        "airport_id": 14,
+        "airport_code": "UTH",
+        "gate": [
+            "Gate N1",
+            "Gate N2",
+            "Gate N3"
+        ],
+        "name": "Udon Thani Airport",
+        "location": "Udon Thani"
+    },
+    {
+        "airport_id": 15,
+        "airport_code": "LPT",
+        "gate": [
+            "Gate O1",
+            "Gate O2",
+            "Gate O3"
+        ],
+        "name": "Lampang Airport",
+        "location": "Lampang"
+    },
+    {
+        "airport_id": 16,
+        "airport_code": "BFV",
+        "gate": [
+            "Gate P1",
+            "Gate P2",
+            "Gate P3"
+        ],
+        "name": "Buri Ram Airport",
+        "location": "Buri Ram"
+    },
+    {
+        "airport_id": 17,
+        "airport_code": "LOE",
+        "gate": [
+            "Gate Q1",
+            "Gate Q2",
+            "Gate Q3"
+        ],
+        "name": "Loei Airport",
+        "location": "Loei"
+    },
+    {
+        "airport_id": 18,
+        "airport_code": "UNN",
+        "gate": [
+            "Gate R1",
+            "Gate R2",
+            "Gate R3"
+        ],
+        "name": "Ranong Airport",
+        "location": "Ranong"
+    },
+    {
+        "airport_id": 19,
+        "airport_code": "KKC",
+        "gate": [
+            "Gate S1",
+            "Gate S2",
+            "Gate S3"
+        ],
+        "name": "Khon Kaen Airport",
+        "location": "Khon Kaen"
+    },
+    {
+        "airport_id": 20,
+        "airport_code": "PHS",
+        "gate": [
+            "Gate T1",
+            "Gate T2",
+            "Gate T3"
+        ],
+        "name": "Phitsanulok Airport",
+        "location": "Phitsanulok"
+    },
+    {
+        "airport_id": 21,
+        "airport_code": "THS",
+        "gate": [
+            "Gate U1",
+            "Gate U2",
+            "Gate U3"
+        ],
+        "name": "Sukhothai Airport",
+        "location": "Sukhothai"
+    },
+    {
+        "airport_id": 22,
+        "airport_code": "SNO",
+        "gate": [
+            "Gate V1",
+            "Gate V2",
+            "Gate V3"
+        ],
+        "name": "Sakon Nakhon Airport",
+        "location": "Sakon Nakhon"
+    },
+    {
+        "airport_id": 23,
+        "airport_code": "CJM",
+        "gate": [
+            "Gate W1",
+            "Gate W2",
+            "Gate W3"
+        ],
+        "name": "Chumphon Airport",
+        "location": "Chumphon"
+    },
+    {
+        "airport_id": 24,
+        "airport_code": "TST",
+        "gate": [
+            "Gate X1",
+            "Gate X2",
+            "Gate X3"
+        ],
+        "name": "Trang Airport",
+        "location": "Trang"
+    },
+    {
+        "airport_id": 25,
+        "airport_code": "TDX",
+        "gate": [
+            "Gate Y1",
+            "Gate Y2",
+            "Gate Y3"
+        ],
+        "name": "Trat Airport",
+        "location": "Trat"
+    },
+    {
+        "airport_id": 26,
+        "airport_code": "HGN",
+        "gate": [
+            "Gate Z1",
+            "Gate Z2",
+            "Gate Z3"
+        ],
+        "name": "Mae Hong Son Airport",
+        "location": "Mae Hong Son"
+    },
+    {
+        "airport_id": 27,
+        "airport_code": "HHQ",
+        "gate": [
+            "Gate AA1",
+            "Gate AA2",
+            "Gate AA3"
+        ],
+        "name": "Hua Hin Airport",
+        "location": "Hua Hin"
+    },
+    {
+        "airport_id": 28,
+        "airport_code": "NAW",
+        "gate": [
+            "Gate BB1",
+            "Gate BB2",
+            "Gate BB3"
+        ],
+        "name": "Narathiwat Airport",
+        "location": "Narathiwat"
+    },
+    {
+        "airport_id": 29,
+        "airport_code": "ROI",
+        "gate": [
+            "Gate CC1",
+            "Gate CC2",
+            "Gate CC3"
+        ],
+        "name": "Roi Et Airport",
+        "location": "Roi Et"
+    },
+    {
+        "airport_id": 30,
+        "airport_code": "NNT",
+        "gate": [
+            "Gate DD1",
+            "Gate DD2",
+            "Gate DD3"
+        ],
+        "name": "Nan Airport",
+        "location": "Nan"
+    },
+    {
+        "airport_id": 31,
+        "airport_code": "KOP",
+        "gate": [
+            "Gate EE1",
+            "Gate EE2",
+            "Gate EE3"
+        ],
+        "name": "Nakhon Phanom Airport",
+        "location": "Nakhon Phanom"
+    }
+]
