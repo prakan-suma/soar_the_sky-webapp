@@ -37,7 +37,7 @@
         }
     ],
     "3": [
-        {
+        { 
             "flight_no": "CX101",
             "departure_airport": 3,
             "destination_airport": 1,

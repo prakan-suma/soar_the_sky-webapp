@@ -9,6 +9,9 @@ class AirLineController:
         self.__flight_instance_list = []
         self.__airplane_list = []
         self.__airport_list = []
+        self.__user_list = []
+        self.__booking_list = []
+        
 
     # getter
     def get_airplane_list(self):
@@ -19,7 +22,17 @@ class AirLineController:
 
     def get_flight_list(self):
         return self.__flight_instance_list
+
+    def get_user_list(self):
+        return self.__user_list
+    
+    def get_booking_list(self):
+        return self.__booking_list
+    
     # setter
+
+    def set_user_list(self,user_list):
+        self.__user_list = user_list
 
     def set_airport_list(self, airport_list):
         self.__airport_list = airport_list
@@ -29,8 +42,18 @@ class AirLineController:
 
     def set_flight_instance(self, flight_list):
         self.__flight_instance_list = flight_list
-
+    
     # search method
+    def search_flight_from_no(self,flight_no):
+        for flight in self.__flight_instance_list:
+            if flight_no == flight.flight_no:
+                return flight
+            
+    def search_airplane_in_flight(self,flight_no):
+        for flight in self.__flight_instance_list:
+            if flight_no == flight.flight_no:
+                return flight.airplane
+    
     def search_flight_one_way(self, departureAirport, destinationAirport, departureDate):
         flight_found = []
     # search flight from departureAirport,destinationAirport,departureDate

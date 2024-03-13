@@ -1,0 +1,29 @@
+[
+    {
+        "user_id": 1,
+        "username": "Prakan",
+        "password": "1234",
+        "first_name": "Prakan",
+        "last_name": "Suma",
+        "phone_number": "098888882",
+        "email": "prakan@kmit.ac.th"
+    },
+    {
+        "user_id": 2,
+        "username": "user_ex1",
+        "password": "3241",
+        "first_name": "user",
+        "last_name": "ex",
+        "phone_number": "098888882",
+        "email": "user_ex@kmit.ac.th"
+    },
+    {
+        "user_id": 3,
+        "username": "user_ex2",
+        "password": "3241",
+        "first_name": "user",
+        "last_name": "ex",
+        "phone_number": "098888882",
+        "email": "user_ex@kmit.ac.th"
+    }
+]

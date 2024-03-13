@@ -6,25 +6,9 @@
         "departure_time": "06:00",
         "arrival_time": "07:00",
         "duration_time": "1:00:00",
-        "airplane": 1,
-        "price": 1143,
+        "airplane": 13,
+        "price": 1358,
         "departure_date": [
-            {
-                "2024-03-10": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-11": {
-                    "flight_seat": []
-                }
-            },
-    
-            {
-                "2024-03-12": {
-                    "flight_seat": []
-                }
-            },
             {
                 "2024-03-13": {
                     "flight_seat": []
@@ -42,21 +26,36 @@
             },
             {
                 "2024-03-16": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-17": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-18": {
+                    "flight_seat": [
+                        {
+                            "_Seat__airplane_id": 13,
+                            "_Seat__seat_number": "A7",
+                            "_passenger":         "2024-03-18": {
                     "flight_seat": []
                 }
             },
             {
                 "2024-03-19": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-20": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-21": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-22": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-23": {
                     "flight_seat": []
                 }
             }
@@ -69,24 +68,9 @@
         "departure_time": "09:00",
         "arrival_time": "10:00",
         "duration_time": "1:00:00",
-        "airplane": 1,
-        "price": 1442,
+        "airplane": 40,
+        "price": 1779,
         "departure_date": [
-            {
-                "2024-03-10": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-11": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-12": {
-                    "flight_seat": []
-                }
-            },
             {
                 "2024-03-13": {
                     "flight_seat": []
@@ -119,6 +103,26 @@
             },
             {
                 "2024-03-19": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-20": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-21": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-22": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-23": {
                     "flight_seat": []
                 }
             }
@@ -131,24 +135,9 @@
         "departure_time": "12:00",
         "arrival_time": "13:00",
         "duration_time": "1:00:00",
-        "airplane": 1,
-        "price": 1785,
+        "airplane": 15,
+        "price": 1271,
         "departure_date": [
-            {
-                "2024-03-10": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-11": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-12": {
-                    "flight_seat": []
-                }
-            },
             {
                 "2024-03-13": {
                     "flight_seat": []
@@ -181,6 +170,26 @@
             },
             {
                 "2024-03-19": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-20": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-21": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-22": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-23": {
                     "flight_seat": []
                 }
             }
@@ -193,24 +202,9 @@
         "departure_time": "15:00",
         "arrival_time": "16:00",
         "duration_time": "1:00:00",
-        "airplane": 1,
-        "price": 1612,
+        "airplane": 22,
+        "price": 1280,
         "departure_date": [
-            {
-                "2024-03-10": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-11": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-12": {
-                    "flight_seat": []
-                }
-            },
             {
                 "2024-03-13": {
                     "flight_seat": []
@@ -243,6 +237,26 @@
             },
             {
                 "2024-03-19": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-20": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-21": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-22": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-23": {
                     "flight_seat": []
                 }
             }
@@ -255,24 +269,9 @@
         "departure_time": "18:00",
         "arrival_time": "19:00",
         "duration_time": "1:00:00",
-        "airplane": 1,
-        "price": 1122,
+        "airplane": 2,
+        "price": 1479,
         "departure_date": [
-            {
-                "2024-03-10": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-11": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-12": {
-                    "flight_seat": []
-                }
-            },
             {
                 "2024-03-13": {
                     "flight_seat": []
@@ -305,6 +304,26 @@
             },
             {
                 "2024-03-19": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-20": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-21": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-22": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-23": {
                     "flight_seat": []
                 }
             }
@@ -317,24 +336,9 @@
         "departure_time": "08:00",
         "arrival_time": "09:00",
         "duration_time": "1:00:00",
-        "airplane": 1,
-        "price": 1538,
+        "airplane": 42,
+        "price": 1079,
         "departure_date": [
-            {
-                "2024-03-10": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-11": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-12": {
-                    "flight_seat": []
-                }
-            },
             {
                 "2024-03-13": {
                     "flight_seat": []
@@ -369,34 +373,39 @@
                 "2024-03-19": {
                     "flight_seat": []
                 }
+            },
+            {
+                "2024-03-20": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-21": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-22": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-23": {
+                    "flight_seat": []
+                }
             }
         ]
     },
     {
-        "flight_no": "CX102",
+        "flight_no": "CX101",
         "departure_airport": 3,
         "destination_airport": 1,
         "departure_time": "11:00",
         "arrival_time": "12:00",
         "duration_time": "1:00:00",
-        "airplane": 1,
-        "price": 1041,
+        "airplane": 42,
+        "price": 1044,
         "departure_date": [
-            {
-                "2024-03-10": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-11": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-12": {
-                    "flight_seat": []
-                }
-            },
             {
                 "2024-03-13": {
                     "flight_seat": []
@@ -431,34 +440,39 @@
                 "2024-03-19": {
                     "flight_seat": []
                 }
+            },
+            {
+                "2024-03-20": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-21": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-22": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-23": {
+                    "flight_seat": []
+                }
             }
         ]
     },
     {
-        "flight_no": "CX103",
+        "flight_no": "CX101",
         "departure_airport": 3,
         "destination_airport": 1,
         "departure_time": "14:00",
         "arrival_time": "15:00",
         "duration_time": "1:00:00",
-        "airplane": 1,
-        "price": 1299,
+        "airplane": 40,
+        "price": 1516,
         "departure_date": [
-            {
-                "2024-03-10": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-11": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-12": {
-                    "flight_seat": []
-                }
-            },
             {
                 "2024-03-13": {
                     "flight_seat": []
@@ -493,34 +507,39 @@
                 "2024-03-19": {
                     "flight_seat": []
                 }
+            },
+            {
+                "2024-03-20": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-21": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-22": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-23": {
+                    "flight_seat": []
+                }
             }
         ]
     },
     {
-        "flight_no": "CX104",
+        "flight_no": "CX101",
         "departure_airport": 3,
         "destination_airport": 1,
         "departure_time": "16:00",
         "arrival_time": "18:00",
         "duration_time": "2:00:00",
-        "airplane": 1,
-        "price": 1256,
+        "airplane": 48,
+        "price": 1188,
         "departure_date": [
-            {
-                "2024-03-10": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-11": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-12": {
-                    "flight_seat": []
-                }
-            },
             {
                 "2024-03-13": {
                     "flight_seat": []
@@ -553,36 +572,41 @@
             },
             {
                 "2024-03-19": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-20": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-21": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-22": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-23": {
                     "flight_seat": []
                 }
             }
         ]
     },
     {
-        "flight_no": "CX105",
+        "flight_no": "CX101",
         "departure_airport": 3,
         "destination_airport": 1,
         "departure_time": "19:00",
         "arrival_time": "20:00",
         "duration_time": "1:00:00",
-        "airplane": 1,
-        "price": 1731,
+        "airplane": 44,
+        "price": 1579,
         "departure_date": [
-            {
-                "2024-03-10": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-11": {
-                    "flight_seat": []
-                }
-            },
-            {
-                "2024-03-12": {
-                    "flight_seat": []
-                }
-            },
             {
                 "2024-03-13": {
                     "flight_seat": []
@@ -615,6 +639,26 @@
             },
             {
                 "2024-03-19": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-20": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-21": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-22": {
+                    "flight_seat": []
+                }
+            },
+            {
+                "2024-03-23": {
                     "flight_seat": []
                 }
             }
