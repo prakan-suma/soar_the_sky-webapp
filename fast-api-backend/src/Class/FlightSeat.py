@@ -31,11 +31,10 @@ class FlightSeat(Seat):
         return self._status
 
     def to_dict(self):
-
         return {
             "airplane_id": self.airplane_id,
             "seat_number": self.seat_number,
-            "passenger": self.passenger.to_dict() if self.passenger else None,
+            "passenger": self.passenger.to_dict() ,
             "baggage_weight": self.baggage_weight,
             "extra_meal": self.extra_meal,
             "price": self.price,

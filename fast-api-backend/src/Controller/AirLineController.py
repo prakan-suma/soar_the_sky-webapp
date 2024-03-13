@@ -42,8 +42,17 @@ class AirLineController:
 
     def set_flight_instance(self, flight_list):
         self.__flight_instance_list = flight_list
-    
+        
+    def add_booking(self,booking):
+        self.get_booking_list().append(booking)
+        
     # search method
+    
+    def search_booking_from_id(self,booking_id):
+        for booking in self.__booking_list:
+            if booking_id == booking.booking_id:
+                return booking
+        
     def search_flight_from_no(self,flight_no):
         for flight in self.__flight_instance_list:
             if flight_no == flight.flight_no:

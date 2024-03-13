@@ -1,5 +1,6 @@
 import json
 import random
+import uuid
 from fastapi import FastAPI, Body, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from src.Controller import AirLineController
@@ -88,8 +89,7 @@ async def register(user_data: dict = Body(...)):
             return {"message": "This username is already taken."}
 
         user_count = len(airline_controller.get_user_list())
-        new_user = User.User((user_count+1), username, password,
-                             first_name, last_name, phone_number, email)
+        new_user = User.User((user_count+1), username, password,first_name, last_name, phone_number, email)
 
         new_user.add_user_to_json()
 
@@ -137,8 +137,25 @@ async def login(user_data: dict = Body(...)):
         return {"message": f"Login failed: {str(e)}"}, 500
 
 # booking
-# @app.post('/api/booking/payment/')
-# async def booking_payment():
+@app.post('/api/booking/payment/')
+async def booking_payment(request: Request):
+    body = await request.json()
+    booking_id = body.get('booking_id')
+    payment_id = body.get('payment_id')
+    referral_code = body.get('referral_code')
+    status = body.get('status')
+    
+    # search booking id in airline
+    booking = airline_controller.search_booking_from_id(booking_id)
+    
+    if payment_id != booking.payment.payment_id and referral_code != booking.payment.payment_method.referral_code and status != True:
+        return {"message" : "Unsuccessful transaction" }
+    
+    # set status 
+    booking.set_status(True)
+    booking.payment.payment_method.set_status(True)
+    
+    return booking.to_dict()
     
 
 
@@ -148,17 +165,18 @@ async def one_way_booking(request: Request):
     body = await request.json()
 
     # Access the data
-    departure_flight = body.get("departure_flight", [])
-
     booking_id = len(airline_controller.get_booking_list())+1
+    departure_flight = body.get("departure_flight", [])
+    total_seat_price = 0
+    passenger_amount = 0
 
     for flight in departure_flight:
         flight_no = flight.get("flight_no")
         departure_date = flight.get("departure_date")
-
         passengers = flight.get("passenger", [])
 
         for passenger_group in passengers:
+            passenger_amount += len(passenger_group)
             for passenger_id, passenger_data in passenger_group.items():
                 for passenger in passenger_data:
                     title = passenger.get("title")
@@ -177,30 +195,37 @@ async def one_way_booking(request: Request):
 
                     if seat_number != None:
                         price = 200
-                    
+                        total_seat_price += price
+
+                    airplane = airline_controller.search_airplane_in_flight(
+                        flight_no)
+                    flight_obj = airline_controller.search_flight_from_no(
+                        flight_no)
+
                     passenger_obj = Passenger.Passenger(
                         passenger_id, booking_id, title, first_name, last_name, date_of_birth, gender, phone_number, email)
-                    
-                    airplane = airline_controller.search_airplane_in_flight(flight_no)
-                    
+
                     flight_seat_obj = FlightSeat.FlightSeat(
                         airplane.airplane_id, seat_number, passenger_obj, extra_baggage, extra_meal, price, True)
 
-                    flight_obj = airline_controller.search_flight_from_no(flight_no)
-                    
-                    flight_obj.add_flight_seat(departure_date,flight_seat_obj)
-                    # return departure_date , flight_obj.departure_dates
-                    
-    
-    # Booking.Booking()
+                    # add flight seat and passenger in to departure_date
+                    flight_obj.add_flight_seat(departure_date, flight_seat_obj)
 
-    # found flight object
-
-    # for passenger_info in passenger_list:
-    #     return seat_number
-
-    # return {"message": flight_seat_obj}
-
+        # create Payment
+        
+        payment_id = uuid.uuid4()
+        price_sum = (flight_obj.price * passenger_amount) + total_seat_price
+        today = date.today()
+        payment_method = PaymentMethod.PaymentMethod(payment_id,price_sum,uuid.uuid4())
+        payment = Payment.Payment(payment_id,price_sum,today,payment_method)
+        booking = Booking.Booking(booking_id,flight_obj,today,payment)
+        
+        # add booking into airline 
+        airline_controller.add_booking(booking)
+        
+        return booking.to_dict()
+        
+        
 
 def calculate_duration(departure_time, arrival_time):
     departure = datetime.strptime(departure_time, '%H:%M')
@@ -233,7 +258,7 @@ def create_flight_instance_json():
                 departure_date = (
                     datetime.now() + timedelta(days=i)).strftime('%Y-%m-%d')
                 flight_data["departure_date"].append(
-                    {departure_date: {"flight_seat": []}})
+                    {departure_date: []})
 
             flight_all.append(flight_data)
 
@@ -244,7 +269,7 @@ def create_flight_instance_json():
 
 def create_instance():
     create_flight_instance_json()
-
+    # with open('./src/')
     with open('./src/database/flight_instance.json', "r") as f:
         flight_instances_json = json.load(f)
 

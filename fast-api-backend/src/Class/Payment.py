@@ -20,3 +20,12 @@ class Payment:
     @property
     def payment_method(self):
         return self._payment_method
+    
+    def to_dict(self):
+        return {
+            "payment_id": str(self.payment_id),
+            "amount": self.amount,
+            "payment_date": self.payment_date.strftime("%Y-%m-%d"),
+            "payment_method": self.payment_method.to_dict() if self.payment_method else None,  # Handle potential None value
+        }
+
