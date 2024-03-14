@@ -65,7 +65,64 @@ async def search_one_way(passenger, departureAirport, destinationAirport, depart
     except Exception as e:
         raise HTTPException(status_code=500, detail="Internal server error")
 
+
+@app.get("/api/flight/one-way/seat/{departure_flight_no}/{departure_date}/")
+async def seat(departure_flight_no, departure_date):
+    try:
+        flight_obj = airline_controller.search_flight_from_no(
+            departure_flight_no)
+        seat_amount = flight_obj.airplane.seat
+        departure_seat = []
+        for departure_dates in flight_obj.departure_dates:
+            if departure_date in departure_dates:
+                for date, seats in departure_dates.items():
+                    for seat_obj in seats:
+                        departure_seat.append(seat_obj.seat_number)
+
+        return {
+            "seat_already_reserved": departure_seat,
+            "total_seat": seat_amount
+        }
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Internal server error")
 # user route
+
+
+@app.get("/api/flight/round-trip/seat/{departure_flight_no}/{departure_date}/{return_flight_no}/{return_date}/")
+async def round_trip_seat(departure_flight_no, departure_date, return_flight_no, return_date):
+    try:
+        departure_flight_obj = airline_controller.search_flight_from_no(
+            departure_flight_no)
+        departure_seat_amount = departure_flight_obj.airplane.seat
+        departure_seat = []
+
+        return_flight_obj = airline_controller.search_flight_from_no(
+            return_flight_no)
+        return_seat_amount = return_flight_obj.airplane.seat
+        return_seat = []
+
+        for departure_dates in departure_flight_obj.departure_dates:
+            if departure_date in departure_dates:
+                for date, seats in departure_dates.items():
+                    for seat_obj in seats:
+                        departure_seat.append(seat_obj.seat_number)
+
+        for departure_dates in return_flight_obj.departure_dates:
+            if return_date in departure_dates:
+                for date, seats in departure_dates.items():
+                    for seat_obj in seats:
+                        return_seat.append(seat_obj.seat_number)
+
+        return [{
+            "departure_seat": [{"seat_already_reserved": departure_seat,
+                                "total_seat": departure_seat_amount}],
+            "return_seat": [{"seat_already_reserved": return_seat,
+                                "total_seat": return_seat_amount}]
+            }]
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Internal server error")
 
 
 @app.post("/api/register/")
@@ -138,10 +195,11 @@ async def login(user_data: dict = Body(...)):
     except Exception as e:
         return {"message": f"Login failed: {str(e)}"}, 500
 
+
 @app.post("/api/logout/")
 async def logout(user_data: dict = Body(...)):
-    try :
-        pass     
+    try:
+        pass
     except Exception as e:
         return {"message": f"Logout failed: {str(e)}"}, 500
 # booking
@@ -159,14 +217,14 @@ async def booking_payment(request: Request):
     booking = airline_controller.search_booking_from_id(booking_id)
 
     # ตรวจสอบว่า booking มีค่าหรือไม่
-    # if not booking:
-    #     raise HTTPException(status_code=404, detail="Booking not found")
+    if not booking:
+        raise HTTPException(status_code=404, detail="Booking not found")
 
     # ตรวจสอบความถูกต้องของข้อมูลการชำระเงิน
-    # if (payment_id != booking.payment.payment_id or
-    #     referral_code != booking.payment.payment_method.referral_code or
-    #         status != True):  # สมมติว่า status ควรเป็น boolean
-    #     raise HTTPException(status_code=400, detail="Invalid payment details")
+    if (payment_id != booking.payment.payment_id or
+        referral_code != booking.payment.payment_method.referral_code or
+            status != True):  # สมมติว่า status ควรเป็น boolean
+        raise HTTPException(status_code=400, detail="Invalid payment details")
 
     # ตั้งค่า status ของ booking และ payment method เป็น True
     booking.set_status(True)
@@ -201,8 +259,7 @@ async def booking_payment(request: Request):
                             gate = booking.flight[1].gate
                             barcode_id = f"SA0{uuid.uuid4()}"
 
-                            ticket = Ticket.Ticket(ticket_id, flight_no, passenger_name, class_type, departure_date, flight_seat,
-                                                   departure_airport, destination_airport, boarding_time_str, baggage, gate, barcode_id)
+                            ticket = Ticket.Ticket(ticket_id, flight_no, passenger_name, class_type, departure_date, flight_seat,departure_airport, destination_airport, boarding_time_str, baggage, gate, barcode_id)
 
                             ticket_list.append(ticket.to_dict())
                             booking.set_ticket(ticket)
@@ -232,8 +289,7 @@ async def booking_payment(request: Request):
                             gate = booking.flight[0].gate
                             barcode_id = f"SA0{uuid.uuid4()}"
 
-                            ticket = Ticket.Ticket(ticket_id, flight_no, passenger_name, class_type, departure_date, flight_seat,
-                                                   departure_airport, destination_airport, boarding_time_str, baggage, gate, barcode_id)
+                            ticket = Ticket.Ticket(ticket_id, flight_no, passenger_name, class_type, departure_date, flight_seat,departure_airport, destination_airport, boarding_time_str, baggage, gate, barcode_id)
 
                             ticket_list.append(ticket.to_dict())
                             booking.set_ticket(ticket)
@@ -244,8 +300,7 @@ async def booking_payment(request: Request):
 
     # ให้ทำการบันทึกข้อมูล booking ลงในไฟล์ JSON
     booking.add_booking_to_json()
-
-    return {"message": "Successful transaction", "tickets": ticket_list}
+    return {"message": "Successful transaction", "tickets": ticket}
 
 
 @app.delete('/api/booking/{booking_id}/cancel/')
@@ -328,7 +383,7 @@ async def one_way_booking(request: Request):
     airline_controller.add_booking(booking)
 
     # return booking.to_dict()
-    return booking
+    return booking.to_dict()
 
 
 @app.post("/api/round-trip/booking/")
@@ -405,16 +460,10 @@ async def round_trip_booking(request: Request):
     airline_controller.add_booking(booking)
 
     # return booking.to_dict()
-    return booking
+    return booking.to_dict()
 
 
-
-
-
-
-
-
-# Create instance section  
+# Create instance section
 def calculate_duration(departure_time, arrival_time):
     departure = datetime.strptime(departure_time, '%H:%M')
     arrival = datetime.strptime(arrival_time, '%H:%M')
