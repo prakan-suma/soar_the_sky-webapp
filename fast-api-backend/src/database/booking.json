@@ -1,0 +1,338 @@
+[
+    {
+        "booking_id": "1",
+        "flight": {
+            "flight_no": "BN101",
+            "departure_airport": {
+                "airport_id": 1,
+                "airport_code": "BKK",
+                "gate": [
+                    "Gate A1",
+                    "Gate A2",
+                    "Gate A3"
+                ],
+                "name": "Suvarnabhumi Airport",
+                "location": "Bangkok"
+            },
+            "destination_airport": {
+                "airport_id": 3,
+                "airport_code": "CNX",
+                "gate": [
+                    "Gate C1",
+                    "Gate C2",
+                    "Gate C3"
+                ],
+                "name": "Chiang Mai International Airport",
+                "location": "Chiang Mai"
+            },
+            "departure_time": "06:00",
+            "arrival_time": "07:00",
+            "duration_time": "1:00:00",
+            "airplane": {
+                "airplane_id": "21",
+                "model": "Bombardier CRJ700",
+                "capacity": 75,
+                "seat": 65
+            },
+            "price": 1253,
+            "departure_dates": [
+                {
+                    "date": "2024-03-14",
+                    "flight_seats": []
+                },
+                {
+                    "date": "2024-03-15",
+                    "flight_seats": []
+                },
+                {
+                    "date": "2024-03-16",
+                    "flight_seats": [
+                        {
+                            "airplane_id": 21,
+                            "seat_number": "A7",
+                            "passenger": {
+                                "passenger_id": "1",
+                                "booking_id": 1,
+                                "title": "Mr",
+                                "first_name": "John",
+                                "last_name": "Doe",
+                                "date_of_birth": "2002-07-18",
+                                "gender": "Male",
+                                "phone_number": "0801512122",
+                                "email": "johndoe@gmail.caom"
+                            },
+                            "baggage_type": true,
+                            "extra_meal": false,
+                            "price": 200,
+                            "status": true
+                        },
+                        {
+                            "airplane_id": 21,
+                            "seat_number": "A8",
+                            "passenger": {
+                                "passenger_id": "2",
+                                "booking_id": 1,
+                                "title": "Mr",
+                                "first_name": "Prkan",
+                                "last_name": "Suma",
+                                "date_of_birth": "2002-04-06",
+                                "gender": "Male",
+                                "phone_number": null,
+                                "email": null
+                            },
+                            "baggage_type": false,
+                            "extra_meal": false,
+                            "price": 200,
+                            "status": true
+                        }
+                    ]
+                },
+                {
+                    "date": "2024-03-17",
+                    "flight_seats": []
+                },
+                {
+                    "date": "2024-03-18",
+                    "flight_seats": []
+                },
+                {
+                    "date": "2024-03-19",
+                    "flight_seats": []
+                },
+                {
+                    "date": "2024-03-20",
+                    "flight_seats": []
+                },
+                {
+                    "date": "2024-03-21",
+                    "flight_seats": []
+                },
+                {
+                    "date": "2024-03-22",
+                    "flight_seats": []
+                },
+                {
+                    "date": "2024-03-23",
+                    "flight_seats": []
+                },
+                {
+                    "date": "2024-03-24",
+                    "flight_seats": []
+                }
+            ]
+        },
+        "booking_date": "2024-03-14",
+        "status": true,
+        "ticket_list": [
+            {
+                "ticket_id": "173db10d-58cd-49b6-92e0-41989129935c",
+                "flight_no": "BN101",
+                "passenger_name": "Mr. John Doe",
+                "class_type": "Economy",
+                "departure_date": "2024-03-16",
+                "flight_seat": "A7",
+                "departure_airport": "BKK",
+                "destination_airport": "CNX",
+                "boarding_time": "05:00",
+                "baggage": "SA Extra",
+                "gate": "Gate A3",
+                "barcode_id": "SA0da7ca55a-bccf-4d3e-93da-c0b55aab32e5"
+            },
+            {
+                "ticket_id": "41203585-8516-4e3d-a81f-19a69237c819",
+                "flight_no": "BN101",
+                "passenger_name": "Mr. Prkan Suma",
+                "class_type": "Economy",
+                "departure_date": "2024-03-16",
+                "flight_seat": "A8",
+                "departure_airport": "BKK",
+                "destination_airport": "CNX",
+                "boarding_time": "05:00",
+                "baggage": "SA Lite",
+                "gate": "Gate A3",
+                "barcode_id": "SA06926bfbf-c3f9-48d7-b1f4-faa2da024d33"
+            }
+        ],
+        "payment": {
+            "payment_id": "db550be3-43cc-427a-a3cf-f71949277186",
+            "amount": 0,
+            "payment_date": "2024-03-14",
+            "payment_method": {
+                "payment_id": "db550be3-43cc-427a-a3cf-f71949277186",
+                "bank_name": "SCB",
+                "bank_account_no": "06543987001",
+                "total_price": 0,
+                "referral_code": "c94da509-47f8-46d8-852c-da4bb97111a6",
+                "status": true
+            }
+        }
+    },
+    {
+        "booking_id": "1",
+        "flight": {
+            "flight_no": "BN101",
+            "departure_airport": {
+                "airport_id": 1,
+                "airport_code": "BKK",
+                "gate": [
+                    "Gate A1",
+                    "Gate A2",
+                    "Gate A3"
+                ],
+                "name": "Suvarnabhumi Airport",
+                "location": "Bangkok"
+            },
+            "destination_airport": {
+                "airport_id": 3,
+                "airport_code": "CNX",
+                "gate": [
+                    "Gate C1",
+                    "Gate C2",
+                    "Gate C3"
+                ],
+                "name": "Chiang Mai International Airport",
+                "location": "Chiang Mai"
+            },
+            "departure_time": "06:00",
+            "arrival_time": "07:00",
+            "duration_time": "1:00:00",
+            "airplane": {
+                "airplane_id": "5",
+                "model": "Boeing 787",
+                "capacity": 250,
+                "seat": 220
+            },
+            "price": 1634,
+            "departure_dates": [
+                {
+                    "date": "2024-03-14",
+                    "flight_seats": []
+                },
+                {
+                    "date": "2024-03-15",
+                    "flight_seats": []
+                },
+                {
+                    "date": "2024-03-16",
+                    "flight_seats": [
+                        {
+                            "airplane_id": 5,
+                            "seat_number": "A7",
+                            "passenger": {
+                                "passenger_id": "1",
+                                "booking_id": 1,
+                                "title": "Mr",
+                                "first_name": "John",
+                                "last_name": "Doe",
+                                "date_of_birth": "2002-07-18",
+                                "gender": "Male",
+                                "phone_number": "0801512122",
+                                "email": "johndoe@gmail.caom"
+                            },
+                            "baggage_type": true,
+                            "extra_meal": false,
+                            "price": 200,
+                            "status": true
+                        },
+                        {
+                            "airplane_id": 5,
+                            "seat_number": "A8",
+                            "passenger": {
+                                "passenger_id": "2",
+                                "booking_id": 1,
+                                "title": "Mr",
+                                "first_name": "Prkan",
+                                "last_name": "Suma",
+                                "date_of_birth": "2002-04-06",
+                                "gender": "Male",
+                                "phone_number": null,
+                                "email": null
+                            },
+                            "baggage_type": false,
+                            "extra_meal": false,
+                            "price": 200,
+                            "status": true
+                        }
+                    ]
+                },
+                {
+                    "date": "2024-03-17",
+                    "flight_seats": []
+                },
+                {
+                    "date": "2024-03-18",
+                    "flight_seats": []
+                },
+                {
+                    "date": "2024-03-19",
+                    "flight_seats": []
+                },
+                {
+                    "date": "2024-03-20",
+                    "flight_seats": []
+                },
+                {
+                    "date": "2024-03-21",
+                    "flight_seats": []
+                },
+                {
+                    "date": "2024-03-22",
+                    "flight_seats": []
+                },
+                {
+                    "date": "2024-03-23",
+                    "flight_seats": []
+                },
+                {
+                    "date": "2024-03-24",
+                    "flight_seats": []
+                }
+            ]
+        },
+        "booking_date": "2024-03-14",
+        "status": true,
+        "ticket_list": [
+            {
+                "ticket_id": "887988a1-a9bf-46dd-83c6-0e48399e76ec",
+                "flight_no": "BN101",
+                "passenger_name": "Mr. John Doe",
+                "class_type": "Economy",
+                "departure_date": "2024-03-16",
+                "flight_seat": "A7",
+                "departure_airport": "BKK",
+                "destination_airport": "CNX",
+                "boarding_time": "05:00",
+                "baggage": "SA Extra",
+                "gate": "Gate A1",
+                "barcode_id": "SA0433b35f4-4a09-47b5-9e55-e27cda57a376"
+            },
+            {
+                "ticket_id": "8fb2136f-482c-4bfc-b644-dbd04f52151f",
+                "flight_no": "BN101",
+                "passenger_name": "Mr. Prkan Suma",
+                "class_type": "Economy",
+                "departure_date": "2024-03-16",
+                "flight_seat": "A8",
+                "departure_airport": "BKK",
+                "destination_airport": "CNX",
+                "boarding_time": "05:00",
+                "baggage": "SA Lite",
+                "gate": "Gate A1",
+                "barcode_id": "SA0de42f3c2-4e65-4505-b699-416fb026093f"
+            }
+        ],
+        "payment": {
+            "payment_id": "6e96fdbe-f6df-4e98-8e13-be63e177755d",
+            "amount": 0,
+            "payment_date": "2024-03-14",
+            "payment_method": {
+                "payment_id": "6e96fdbe-f6df-4e98-8e13-be63e177755d",
+                "bank_name": "SCB",
+                "bank_account_no": "06543987001",
+                "total_price": 0,
+                "referral_code": "cc0884f5-2ff0-40a0-a673-aec154a7b3d1",
+                "status": true
+            }
+        }
+    }
+]

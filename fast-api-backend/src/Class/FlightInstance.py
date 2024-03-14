@@ -3,11 +3,12 @@ import json
 
 
 class FlightInstance(Flight):
-    def __init__(self, flight_no, departure_airport, destination_airport, departure_time, arrival_time, duration_time, airplane, price, departure_date):
+    def __init__(self, flight_no, departure_airport, destination_airport, departure_time, arrival_time, duration_time, gate, airplane, price, departure_date):
         super().__init__(flight_no, departure_airport,
                          destination_airport, departure_time, arrival_time)
         self.__duration_time = duration_time
         self.__airplane = airplane
+        self.__gate = gate
         self.__price = price
         self.__departure_dates = departure_date
 
@@ -24,7 +25,11 @@ class FlightInstance(Flight):
         return self.__price
 
     @property
-    def departure_dates(self):
+    def gate(self):
+        return self.__gate
+    
+    @property
+    def departure_dates(self):  
         return self.__departure_dates
 
     def add_flight_seat(self, departure_date, flight_seat_obj):

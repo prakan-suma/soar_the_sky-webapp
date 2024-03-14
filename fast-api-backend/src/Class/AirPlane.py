@@ -23,7 +23,7 @@ class AirPlane:
 
     def to_dict(self):
         return {
-            'airplane_id': self.__airplane_id,
+            'airplane_id': str(self.__airplane_id),
             'model': self.__model,
             'capacity': self.__capacity,
             'seat': self.__seat

@@ -90,7 +90,7 @@ class AirLineController:
 
     def search_airport_from_id(self, airport_id):
         for a in self.__airport_list:
-            if airport_id == a.get_airport_id():
+            if airport_id == a.airport_id:
                 airport_obj = a
             else:
                 None
