@@ -6,13 +6,10 @@
         "departure_time": "06:00",
         "arrival_time": "07:00",
         "duration_time": "1:00:00",
-        "gate": "Gate A3",
-        "airplane": 25,
-        "price": 1667,
+        "gate": "Gate A1",
+        "airplane": 49,
+        "price": 1619,
         "departure_date": [
-            {
-                "2024-03-14": []
-            },
             {
                 "2024-03-15": []
             },
@@ -42,6 +39,9 @@
             },
             {
                 "2024-03-24": []
+            },
+            {
+                "2024-03-25": []
             }
         ]
     },
@@ -52,13 +52,10 @@
         "departure_time": "09:00",
         "arrival_time": "10:00",
         "duration_time": "1:00:00",
-        "gate": "Gate A3",
-        "airplane": 25,
-        "price": 1176,
+        "gate": "Gate A2",
+        "airplane": 49,
+        "price": 1637,
         "departure_date": [
-            {
-                "2024-03-14": []
-            },
             {
                 "2024-03-15": []
             },
@@ -88,6 +85,9 @@
             },
             {
                 "2024-03-24": []
+            },
+            {
+                "2024-03-25": []
             }
         ]
     },
@@ -98,13 +98,10 @@
         "departure_time": "12:00",
         "arrival_time": "13:00",
         "duration_time": "1:00:00",
-        "gate": "Gate A2",
-        "airplane": 25,
-        "price": 1528,
+        "gate": "Gate A1",
+        "airplane": 49,
+        "price": 1759,
         "departure_date": [
-            {
-                "2024-03-14": []
-            },
             {
                 "2024-03-15": []
             },
@@ -134,6 +131,9 @@
             },
             {
                 "2024-03-24": []
+            },
+            {
+                "2024-03-25": []
             }
         ]
     },
@@ -144,13 +144,10 @@
         "departure_time": "15:00",
         "arrival_time": "16:00",
         "duration_time": "1:00:00",
-        "gate": "Gate A1",
-        "airplane": 25,
-        "price": 1095,
+        "gate": "Gate A3",
+        "airplane": 49,
+        "price": 1766,
         "departure_date": [
-            {
-                "2024-03-14": []
-            },
             {
                 "2024-03-15": []
             },
@@ -180,6 +177,9 @@
             },
             {
                 "2024-03-24": []
+            },
+            {
+                "2024-03-25": []
             }
         ]
     },
@@ -191,12 +191,9 @@
         "arrival_time": "19:00",
         "duration_time": "1:00:00",
         "gate": "Gate A1",
-        "airplane": 25,
-        "price": 1383,
+        "airplane": 49,
+        "price": 1577,
         "departure_date": [
-            {
-                "2024-03-14": []
-            },
             {
                 "2024-03-15": []
             },
@@ -226,6 +223,9 @@
             },
             {
                 "2024-03-24": []
+            },
+            {
+                "2024-03-25": []
             }
         ]
     },
@@ -236,13 +236,10 @@
         "departure_time": "08:00",
         "arrival_time": "09:00",
         "duration_time": "1:00:00",
-        "gate": "Gate C1",
-        "airplane": 25,
-        "price": 1217,
+        "gate": "Gate C2",
+        "airplane": 49,
+        "price": 1390,
         "departure_date": [
-            {
-                "2024-03-14": []
-            },
             {
                 "2024-03-15": []
             },
@@ -272,6 +269,9 @@
             },
             {
                 "2024-03-24": []
+            },
+            {
+                "2024-03-25": []
             }
         ]
     },
@@ -282,13 +282,10 @@
         "departure_time": "11:00",
         "arrival_time": "12:00",
         "duration_time": "1:00:00",
-        "gate": "Gate C2",
-        "airplane": 25,
-        "price": 1499,
+        "gate": "Gate C3",
+        "airplane": 49,
+        "price": 1696,
         "departure_date": [
-            {
-                "2024-03-14": []
-            },
             {
                 "2024-03-15": []
             },
@@ -318,6 +315,9 @@
             },
             {
                 "2024-03-24": []
+            },
+            {
+                "2024-03-25": []
             }
         ]
     },
@@ -329,12 +329,9 @@
         "arrival_time": "15:00",
         "duration_time": "1:00:00",
         "gate": "Gate C3",
-        "airplane": 25,
-        "price": 1378,
+        "airplane": 49,
+        "price": 1483,
         "departure_date": [
-            {
-                "2024-03-14": []
-            },
             {
                 "2024-03-15": []
             },
@@ -364,6 +361,9 @@
             },
             {
                 "2024-03-24": []
+            },
+            {
+                "2024-03-25": []
             }
         ]
     },
@@ -374,13 +374,10 @@
         "departure_time": "16:00",
         "arrival_time": "18:00",
         "duration_time": "2:00:00",
-        "gate": "Gate C1",
-        "airplane": 25,
-        "price": 1555,
+        "gate": "Gate C3",
+        "airplane": 49,
+        "price": 1568,
         "departure_date": [
-            {
-                "2024-03-14": []
-            },
             {
                 "2024-03-15": []
             },
@@ -410,6 +407,9 @@
             },
             {
                 "2024-03-24": []
+            },
+            {
+                "2024-03-25": []
             }
         ]
     },
@@ -420,13 +420,10 @@
         "departure_time": "19:00",
         "arrival_time": "20:00",
         "duration_time": "1:00:00",
-        "gate": "Gate C3",
-        "airplane": 25,
-        "price": 1356,
+        "gate": "Gate C1",
+        "airplane": 49,
+        "price": 1456,
         "departure_date": [
-            {
-                "2024-03-14": []
-            },
             {
                 "2024-03-15": []
             },
@@ -456,6 +453,9 @@
             },
             {
                 "2024-03-24": []
+            },
+            {
+                "2024-03-25": []
             }
         ]
     }

@@ -131,12 +131,19 @@ async def login(user_data: dict = Body(...)):
             raise HTTPException(
                 status_code=401, detail="Invalid username or password")
 
+        token = uuid.uuid4()
         # Login successful, generate a token
-        return {"message": "Login successful!", "token": "<token>"}
+        return {"message": "Login successful!", "token": token}
 
     except Exception as e:
         return {"message": f"Login failed: {str(e)}"}, 500
 
+@app.post("/api/logout/")
+async def logout(user_data: dict = Body(...)):
+    try :
+        pass     
+    except Exception as e:
+        return {"message": f"Logout failed: {str(e)}"}, 500
 # booking
 
 
@@ -148,51 +155,110 @@ async def booking_payment(request: Request):
     referral_code = body.get('referral_code')
     status = body.get('status')
 
-    # search booking id in airline
+    # ค้นหา booking จาก airline controller โดยใช้ booking_id
     booking = airline_controller.search_booking_from_id(booking_id)
 
-    # if payment_id != booking.payment.payment_id and referral_code != booking.payment.payment_method.referral_code and status != True:
-    # return {"message" : "Unsuccessful transaction" }
+    # ตรวจสอบว่า booking มีค่าหรือไม่
+    # if not booking:
+    #     raise HTTPException(status_code=404, detail="Booking not found")
 
-    # set status
+    # ตรวจสอบความถูกต้องของข้อมูลการชำระเงิน
+    # if (payment_id != booking.payment.payment_id or
+    #     referral_code != booking.payment.payment_method.referral_code or
+    #         status != True):  # สมมติว่า status ควรเป็น boolean
+    #     raise HTTPException(status_code=400, detail="Invalid payment details")
+
+    # ตั้งค่า status ของ booking และ payment method เป็น True
     booking.set_status(True)
     booking.payment.payment_method.set_status(True)
 
     ticket_list = []
-    # create ticket
-    for departure_date_dict in booking.flight.departure_dates:
-        for date, seats in departure_date_dict.items():
-            if seats:
-                date_obj = datetime.strptime(date, "%Y-%m-%d")
-                departure_time = datetime.strptime(
-                    booking.flight.departure_time, "%H:%M")
-                boarding_time = departure_time - timedelta(hours=1)
-                for seat in seats:
-                    passenger = seat.passenger
-                    ticket_id = str(uuid.uuid4())
-                    flight_no = booking.flight.flight_no
-                    passenger_name = f"{passenger.title}. {
-                        passenger.first_name} {passenger.last_name}"
-                    class_type = "Economy"
-                    departure_date = date
-                    flight_seat = seat.seat_number
-                    departure_airport = booking.flight.departure_airport.airport_code
-                    destination_airport = booking.flight.destination_airport.airport_code
-                    boarding_time_str = boarding_time.strftime("%H:%M")
-                    baggage = "SA Extra" if seat.baggage_type else "SA Lite"
-                    gate = booking.flight.gate
-                    barcode_id = f"SA0{uuid.uuid4()}"
+    # ตรวจสอบการมีรายการเที่ยวบินหรือไม่
+    if booking.flight:
+        # ในกรณีมีรายการเที่ยวบิน
+        if len(booking.flight) > 1:
+            # โค้ดสำหรับการจัดการเมื่อมีการบินเป็น round trip
+            for departure_date_dict in booking.flight[1].departure_dates:
+                for date, seats in departure_date_dict.items():
+                    if seats:
+                        date_obj = datetime.strptime(date, "%Y-%m-%d")
+                        departure_time = datetime.strptime(
+                            booking.flight[1].departure_time, "%H:%M")
+                        boarding_time = departure_time - timedelta(hours=1)
+                        for seat in seats:
+                            passenger = seat.passenger
+                            ticket_id = str(uuid.uuid4())
+                            flight_no = booking.flight[1].flight_no
+                            passenger_name = f"{passenger.title}. {
+                                passenger.first_name} {passenger.last_name}"
+                            class_type = "Economy"
+                            departure_date = date
+                            flight_seat = seat.seat_number
+                            departure_airport = booking.flight[1].departure_airport.airport_code
+                            destination_airport = booking.flight[1].destination_airport.airport_code
+                            boarding_time_str = boarding_time.strftime("%H:%M")
+                            baggage = "SA Extra" if seat.baggage_type else "SA Lite"
+                            gate = booking.flight[1].gate
+                            barcode_id = f"SA0{uuid.uuid4()}"
 
-                    ticket = Ticket.Ticket(ticket_id, flight_no, passenger_name, class_type, departure_date, flight_seat,
-                                           departure_airport, destination_airport, boarding_time_str, baggage, gate, barcode_id)
+                            ticket = Ticket.Ticket(ticket_id, flight_no, passenger_name, class_type, departure_date, flight_seat,
+                                                   departure_airport, destination_airport, boarding_time_str, baggage, gate, barcode_id)
 
-                    ticket_list.append(ticket.to_dict())
-                    booking.set_ticket(ticket)
+                            ticket_list.append(ticket.to_dict())
+                            booking.set_ticket(ticket)
 
-    # Add booking object to json
+        else:
+            # โค้ดสำหรับการจัดการเมื่อมีการบินเป็น one-way trip
+            for departure_date_dict in booking.flight[0].departure_dates:
+                for date, seats in departure_date_dict.items():
+                    if seats:
+                        date_obj = datetime.strptime(date, "%Y-%m-%d")
+                        departure_time = datetime.strptime(
+                            booking.flight[0].departure_time, "%H:%M")
+                        boarding_time = departure_time - timedelta(hours=1)
+                        for seat in seats:
+                            passenger = seat.passenger
+                            ticket_id = str(uuid.uuid4())
+                            flight_no = booking.flight[0].flight_no
+                            passenger_name = f"{passenger.title}. {
+                                passenger.first_name} {passenger.last_name}"
+                            class_type = "Economy"
+                            departure_date = date
+                            flight_seat = seat.seat_number
+                            departure_airport = booking.flight[0].departure_airport.airport_code
+                            destination_airport = booking.flight[0].destination_airport.airport_code
+                            boarding_time_str = boarding_time.strftime("%H:%M")
+                            baggage = "SA Extra" if seat.baggage_type else "SA Lite"
+                            gate = booking.flight[0].gate
+                            barcode_id = f"SA0{uuid.uuid4()}"
+
+                            ticket = Ticket.Ticket(ticket_id, flight_no, passenger_name, class_type, departure_date, flight_seat,
+                                                   departure_airport, destination_airport, boarding_time_str, baggage, gate, barcode_id)
+
+                            ticket_list.append(ticket.to_dict())
+                            booking.set_ticket(ticket)
+
+    else:
+        # ในกรณีไม่มีรายการเที่ยวบิน
+        raise HTTPException(status_code=404, detail="Flight not found")
+
+    # ให้ทำการบันทึกข้อมูล booking ลงในไฟล์ JSON
     booking.add_booking_to_json()
 
-    return [{"message": "Successful transaction"}, {"tickets": ticket_list }]
+    return {"message": "Successful transaction", "tickets": ticket_list}
+
+
+@app.delete('/api/booking/{booking_id}/cancel/')
+async def cancel_booking(booking_id: int):
+
+    if not airline_controller.search_booking_from_id(booking_id):
+        raise HTTPException(status_code=404, detail="Booking not found")
+
+    airline_controller.cancel_booking(booking_id)
+
+    return {"message": "Booking has been canceled successfully"}
+
+
 @app.post("/api/one-way/booking/")
 async def one_way_booking(request: Request):
     # Get the request body
@@ -201,17 +267,60 @@ async def one_way_booking(request: Request):
     # Access the data
     booking_id = len(airline_controller.get_booking_list()) + 1
     departure_flight = body.get("departure_flight", [])
-    return_flight = body.get("return_flight", [])
-    total_seat_price = 0
-    passenger_amount = 0
 
-    flight_objs = process_flight(departure_flight, return_flight, booking_id, total_seat_price, passenger_amount)
+    flight_objs = []
+    price_sum = 0
 
+    for flight in departure_flight:
+        flight_no = flight.get("flight_no")
+        departure_date = flight.get("departure_date")
+        passengers = flight.get("passenger", [])
+        total_seat_price = 0
+        passenger_amount = 0
+
+        for passenger_group in passengers:
+            passenger_amount += len(passenger_group)
+            for passenger_id, passenger_data in passenger_group.items():
+                for passenger in passenger_data:
+                    title = passenger.get("title")
+                    first_name = passenger.get("first_name")
+                    last_name = passenger.get("last_name")
+                    date_of_birth = passenger.get("date_of_birth")
+                    gender = passenger.get("gender")
+                    phone_number = passenger.get("phone_number")
+                    email = passenger.get("email")
+                    extra_service = passenger.get("extra_service", [])
+
+                    for service in extra_service:
+                        seat_number = service.get("seat_number")
+                        extra_meal = service.get("extra_meal")
+                        extra_baggage = service.get("extra_baggage")
+
+                        if seat_number is not None:
+                            price = 200
+                            total_seat_price += price
+
+                    airplane = airline_controller.search_airplane_in_flight(
+                        flight_no)
+                    flight_obj = airline_controller.search_flight_from_no(
+                        flight_no)
+
+                    passenger_obj = Passenger.Passenger(
+                        passenger_id, booking_id, title, first_name, last_name, date_of_birth, gender, phone_number, email)
+
+                    flight_seat_obj = FlightSeat.FlightSeat(
+                        airplane.airplane_id, seat_number, passenger_obj, extra_baggage, extra_meal, price, True)
+
+                    # add flight seat and passenger in to departure_date
+                    flight_obj.add_flight_seat(departure_date, flight_seat_obj)
+
+        price_sum += flight_obj.price * passenger_amount + total_seat_price
+        flight_objs.append(flight_obj)
     # create Payment
     payment_id = uuid.uuid4()
-    price_sum = sum(flight.price * passenger_amount + total_seat_price for flight in flight_objs)
     today = date.today()
-    payment_method = PaymentMethod.PaymentMethod(payment_id, price_sum, uuid.uuid4())
+    payment_method = PaymentMethod.PaymentMethod(
+        payment_id, price_sum, uuid.uuid4())
     payment = Payment.Payment(payment_id, price_sum, today, payment_method)
     booking = Booking.Booking(booking_id, flight_objs, today, payment)
 
@@ -224,48 +333,25 @@ async def one_way_booking(request: Request):
 
 @app.post("/api/round-trip/booking/")
 async def round_trip_booking(request: Request):
+    # Get the request body
     body = await request.json()
 
+    # Access the data
     booking_id = len(airline_controller.get_booking_list()) + 1
-    total_seat_price = 0
-    passenger_amount = 0
+    departure_flight = body.get("departure_flight", [])
+    return_flight = body.get("return_flight", [])
+
+    flight_objs = []
+    price_sum = 0
 
     # Process departure flight
-    departure_flight = body.get("departure_flight", [])
-    departure_flight_obj = process_flight(
-        departure_flight, booking_id, total_seat_price, passenger_amount)
-
-    # Process return flight
-    return_flight = body.get("return_flight", [])
-    return_flight_obj = process_flight(
-        return_flight, booking_id, total_seat_price, passenger_amount)
-
-    return passenger_amount
-    # Create Payment
-    payment_id = uuid.uuid4()
-    price_sum = (departure_flight_obj.price * passenger_amount) + \
-        (return_flight_obj.price * passenger_amount) + total_seat_price
-    today = date.today()
-    payment_method = PaymentMethod.PaymentMethod(
-        payment_id, price_sum, uuid.uuid4())
-    payment = Payment.Payment(payment_id, price_sum, today, payment_method)
-
-    # Create Booking
-    booking_departure = Booking.Booking(booking_id, departure_flight_obj, today, payment)
-    booking_return = Booking.Booking(booking_id, return_flight_obj, today, payment)
-
-    # Add booking to airline
-    airline_controller.add_booking(booking_departure)
-    airline_controller.add_booking(booking_return)
-
-    return booking_departure,booking_return
-def process_flight(departure_flight, return_flight, booking_id, total_seat_price, passenger_amount):
-    flight_objs = []
-    for flights in [departure_flight, return_flight]:
-        for flight in flights:
-            flight_no = flight.get("flight_no")
-            departure_date = flight.get("departure_date")
-            passengers = flight.get("passenger", [])
+    for flight_data in [departure_flight, return_flight]:
+        for flight_info in flight_data:
+            flight_no = flight_info.get("flight_no")
+            departure_date = flight_info.get("departure_date")
+            passengers = flight_info.get("passenger", [])
+            total_seat_price = 0
+            passenger_amount = 0
 
             for passenger_group in passengers:
                 passenger_amount += len(passenger_group)
@@ -289,8 +375,10 @@ def process_flight(departure_flight, return_flight, booking_id, total_seat_price
                                 price = 200
                                 total_seat_price += price
 
-                        airplane = airline_controller.search_airplane_in_flight(flight_no)
-                        flight_obj = airline_controller.search_flight_from_no(flight_no)
+                        airplane = airline_controller.search_airplane_in_flight(
+                            flight_no)
+                        flight_obj = airline_controller.search_flight_from_no(
+                            flight_no)
 
                         passenger_obj = Passenger.Passenger(
                             passenger_id, booking_id, title, first_name, last_name, date_of_birth, gender, phone_number, email)
@@ -298,13 +386,35 @@ def process_flight(departure_flight, return_flight, booking_id, total_seat_price
                         flight_seat_obj = FlightSeat.FlightSeat(
                             airplane.airplane_id, seat_number, passenger_obj, extra_baggage, extra_meal, price, True)
 
-                        # add flight seat and passenger in to departure_date
-                        flight_obj.add_flight_seat(departure_date, flight_seat_obj)
-                        flight_objs.append(flight_obj)
+                        # add flight seat and passenger into departure_date
+                        flight_obj.add_flight_seat(
+                            departure_date, flight_seat_obj)
 
-    return flight_objs
+            price_sum += flight_obj.price * passenger_amount + total_seat_price
+            flight_objs.append(flight_obj)
+
+    # create Payment
+    payment_id = uuid.uuid4()
+    today = date.today()
+    payment_method = PaymentMethod.PaymentMethod(
+        payment_id, price_sum, uuid.uuid4())
+    payment = Payment.Payment(payment_id, price_sum, today, payment_method)
+    booking = Booking.Booking(booking_id, flight_objs, today, payment)
+
+    # add booking into airline
+    airline_controller.add_booking(booking)
+
+    # return booking.to_dict()
+    return booking
 
 
+
+
+
+
+
+
+# Create instance section  
 def calculate_duration(departure_time, arrival_time):
     departure = datetime.strptime(departure_time, '%H:%M')
     arrival = datetime.strptime(arrival_time, '%H:%M')
@@ -354,7 +464,6 @@ def create_flight_instance_json():
 
 def create_instance():
     # with open('./src/')
-
     with open('./src/database/airplane.json', "r") as f:
         airplane_json = json.load(f)
 
@@ -414,7 +523,6 @@ def create_instance():
                                                         'arrival_time'], flight_instance_list['duration_time'], flight_instance_list['gate'], airplane_id, flight_instance_list['price'], flight_instance_list['departure_date'])
 
         flight_instances_obj.append(flight_instance)
-
     airline_controller.set_flight_instance(flight_instances_obj)
 
     airline_controller.set_user_list(user_list)

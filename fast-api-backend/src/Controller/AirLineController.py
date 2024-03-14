@@ -99,9 +99,19 @@ class AirLineController:
 
     def search_airplane_from_id(self, airplane_id):
         for a in self.__airplane_list:
-            if airplane_id == a.get_airplane_id():
+            if airplane_id == a.airplane_id:
                 airplane_obj = a
             else:
                 None
 
         return airplane_obj
+    
+    def cancel_booking(self, booking_id):
+        # Search for the booking by its ID
+        booking = self.search_booking_from_id(booking_id)
+        if booking:
+            # Remove the booking from the booking list
+            self.__booking_list.remove(booking)
+            return True  # Return True to indicate successful cancellation
+        else:
+            return False  # Return False if booking is not found

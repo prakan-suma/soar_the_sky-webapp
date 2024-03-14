@@ -60,11 +60,10 @@ class Booking:
 
     def to_dict(self):
         return {
-            # Already addressed in previous responses
             "booking_id": str(self.booking_id),
-            "flight": self.flight.to_dict(),
-            # Convert date to string
+            "flight": [flight.to_dict() for flight in self.flight],  # Iterate over each flight instance
             "booking_date": self.booking_date.strftime("%Y-%m-%d"),
             "status": self.status,
             "ticket_list": [ticket.to_dict() for ticket in self.ticket_list],
-            "payment": self.payment.to_dict() if self.payment else None, }
+            "payment": self.payment.to_dict() if self.payment else None
+        }
