@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "ca74a917-82ff-4fac-96a0-4b222fea1751",
+		"name": "Soar The Skye API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26048735"
+	},
+	"item": [
+		{
+			"name": "Flights",
+			"item": [
+				{
+					"name": "search-one-way",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/flight/search/one-way/1/BKK/CNX/2024-03-11/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"flight",
+								"search",
+								"one-way",
+								"1",
+								"BKK",
+								"CNX",
+								"2024-03-11",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search-round-trip",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/flight/search/round-trip/1/BKK/CNX/2024-04-15/2024-04-18/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"flight",
+								"search",
+								"round-trip",
+								"1",
+								"BKK",
+								"CNX",
+								"2024-04-15",
+								"2024-04-18",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Airport",
+			"item": [
+				{
+					"name": "Airport",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"departure_airport\": \"BKK\",\r\n    \"destination_airport\": \"HND\",\r\n    \"departure_date\": \"2024-02-26T08:00:00\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/airport/search/all/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"airport",
+								"search",
+								"all",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"user_ex1\",\r\n    \"password\": \"3241\",\r\n    \"confirm_password\": \"3241\",\r\n    \"first_name\": \"user\",\r\n    \"last_name\": \"ex\",\r\n    \"phone_number\": \"098888882\",\r\n    \"email\": \"user_ex@kmit.ac.th\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/register/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"user_ex1\",\r\n    \"password\": \"3241\",\r\n    \"confirm_password\": \"3241\",\r\n    \"first_name\": \"user\",\r\n    \"last_name\": \"ex\",\r\n    \"phone_number\": \"098888882\",\r\n    \"email\": \"user_ex@kmit.ac.th\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/login/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "one way booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"departure_flight\": [\r\n        {\r\n            \"flight_no\": \"BN101\",\r\n            \"departure_date\": \"2024-03-16\",\r\n            \"passenger\": [\r\n                {\r\n                    \"1\": [\r\n                        {\r\n                            \"title\": \"Mr\",\r\n                            \"first_name\": \"John\",\r\n                            \"last_name\": \"Doe\",\r\n                            \"date_of_birth\": \"2002-07-18\",\r\n                            \"gender\": \"Male\",\r\n                            \"phone_number\": \"0801512122\",\r\n                            \"email\": \"johndoe@gmail.caom\",\r\n                            \"extra_service\": [\r\n                                {\r\n                                    \"seat_number\": \"A7\",\r\n                                    \"extra_meal\": false,\r\n                                    \"extra_baggage\": true\r\n                                }\r\n                            ]\r\n                        }\r\n                    ],\r\n                    \"2\": [\r\n                        {\r\n                            \"title\": \"Mr\",\r\n                            \"first_name\": \"Prkan\",\r\n                            \"last_name\": \"Suma\",\r\n                            \"age\": 30,\r\n                            \"date_of_birth\": \"2002-04-06\",\r\n                            \"gender\": \"Male\",\r\n                            \"phone_number\": null,\r\n                            \"email\": null,\r\n                            \"extra_service\": [\r\n                                {\r\n                                    \"seat_number\": \"A8\",\r\n                                    \"extra_meal\": false,\r\n                                    \"extra_baggage\": false\r\n                                }\r\n                            ]\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/one-way/booking/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"one-way",
+								"booking",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "round trip booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"departure_flight\": [\r\n        {\r\n            \"flight_no\": \"BN101\",\r\n            \"departure_date\": \"2024-03-15\",\r\n            \"passenger\": [\r\n                {\r\n                    \"1\": [\r\n                        {\r\n                            \"title\": \"Mr\",\r\n                            \"first_name\": \"John\",\r\n                            \"last_name\": \"Doe\",\r\n                            \"date_of_birth\": \"2002-07-18\",\r\n                            \"gender\": \"Male\",\r\n                            \"phone_number\": \"0801512122\",\r\n                            \"email\": \"johndoe@gmail.caom\",\r\n                            \"extra_service\": [\r\n                                {\r\n                                    \"seat_number\": \"A7\",\r\n                                    \"extra_meal\": false,\r\n                                    \"extra_baggage\": true\r\n                                }\r\n                            ]\r\n                        }\r\n                    ],\r\n                    \"2\": [\r\n                        {\r\n                            \"title\": \"Mr\",\r\n                            \"first_name\": \"Prkan\",\r\n                            \"last_name\": \"Suma\",\r\n                            \"age\": 30,\r\n                            \"date_of_birth\": \"2002-04-06\",\r\n                            \"gender\": \"Male\",\r\n                            \"phone_number\": null,\r\n                            \"email\": null,\r\n                            \"extra_service\": [\r\n                                {\r\n                                    \"seat_number\": \"A8\",\r\n                                    \"extra_meal\": false,\r\n                                    \"extra_baggage\": false\r\n                                }\r\n                            ]\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"return_flight\": [\r\n        {\r\n            \"flight_no\": \"CX101\",\r\n            \"departure_date\": \"2024-03-16\",\r\n            \"passenger\": [\r\n                {\r\n                    \"1\": [\r\n                        {\r\n                            \"title\": \"Mr\",\r\n                            \"first_name\": \"John\",\r\n                            \"last_name\": \"Doe\",\r\n                            \"date_of_birth\": \"2002-07-18\",\r\n                            \"gender\": \"Male\",\r\n                            \"phone_number\": \"0801512122\",\r\n                            \"email\": \"johndoe@gmail.caom\",\r\n                            \"extra_service\": [\r\n                                {\r\n                                    \"seat_number\": \"A20\",\r\n                                    \"extra_meal\": false,\r\n                                    \"extra_baggage\": true\r\n                                }\r\n                            ]\r\n                        }\r\n                    ],\r\n                    \"2\": [\r\n                        {\r\n                            \"title\": \"Mr\",\r\n                            \"first_name\": \"Prkan\",\r\n                            \"last_name\": \"Suma\",\r\n                            \"age\": 30,\r\n                            \"date_of_birth\": \"2002-04-06\",\r\n                            \"gender\": \"Male\",\r\n                            \"phone_number\": null,\r\n                            \"email\": null,\r\n                            \"extra_service\": [\r\n                                {\r\n                                    \"seat_number\": \"B20\",\r\n                                    \"extra_meal\": false,\r\n                                    \"extra_baggage\": true\r\n                                }\r\n                            ]\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/round-trip/booking/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"round-trip",
+								"booking",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"booking_id\" : 1,\r\n    \"payment_id\": \"f8db83e9-666c-47c2-97ab-d2669b55378b\",\r\n    \"referral_code\": \"769379b7-915c-4e74-8b64-1a9a213cabc6\",\r\n    \"status\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/booking/payment/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"booking",
+								"payment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancel payment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/booking/1/cancel",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"booking",
+								"1",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Flight Seat",
+			"item": [
+				{
+					"name": "one-way flight seat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/flight/one-way/seat/BN101/2024-03-16/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"flight",
+								"one-way",
+								"seat",
+								"BN101",
+								"2024-03-16",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "round-trip flight seat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/flight/round-trip/seat/BN101/2024-03-15/CX101/2024-03-16",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"flight",
+								"round-trip",
+								"seat",
+								"BN101",
+								"2024-03-15",
+								"CX101",
+								"2024-03-16"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
