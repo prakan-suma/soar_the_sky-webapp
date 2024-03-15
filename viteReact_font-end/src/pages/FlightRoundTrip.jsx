@@ -36,11 +36,11 @@ function FlightRoundTrip() {
             .then(response => response.json())
             .then(data => {
                 const filteredDepartureFlights = data.departure_flights.filter(flight => {
-                    return flight.departure_dates.some(date => Object.keys(date)[0] === departureDate);
+                    return flight.departure_dates.some(date => date.date === departureDate);
                 });
 
                 const filteredReturnFlights = data.return_flights.filter(flight => {
-                    return flight.departure_dates.some(date => Object.keys(date)[0] === returnDate);
+                    return flight.departure_dates.some(date => date.date === returnDate);
                 });
 
                 setFlights({ departureFlights: filteredDepartureFlights, returnFlights: filteredReturnFlights });

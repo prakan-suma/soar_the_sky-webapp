@@ -43,25 +43,26 @@ function FlightOneWay() {
         fetch(`http://127.0.0.1:8000/api/flight/search/one-way/${passenger}/${departureAirport}/${destinationAirport}/${departureDate}/`)
             .then(response => response.json())
             .then(data => {
-                console.log(data)
+
                 // Filter flights based on the specified departure date
                 const filteredFlights = data.filter(flight => {
                     // Check if the flight exists on the specified departure date
-                    return flight.departure_dates.some(date => Object.keys(date) === departureDate);
+                    return flight.departure_dates.some(date => date.date === departureDate);
                 });
+                console.log(filteredFlights)
                 setFlights(filteredFlights);
                 if (filteredFlights.length === 0) {
                     setNoFlights(true);
                 }
-                console.log(flights)
             })
             .catch(error => console.error('Error fetching data:', error))
             .finally(() => setIsLoading(false));
     }, [passenger, departureAirport, destinationAirport, departureDate]);
 
-   
+
     return (
         <div className="container flex mx-auto my-28">
+        {/* {console.log(flights)} */}
             <div className="border w-1/3 p-10 rounded-md shadow-sm h-fit">
                 <h1 className="text-2xl text-cs-skye mb-5">Flights</h1>
                 <p className="text-lg mb-4">Search one way </p>
